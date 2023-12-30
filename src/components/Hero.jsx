@@ -8,9 +8,12 @@ import EarthCanvas from "./canvas/Earth";
 import Tilt from "react-parallax-tilt";
 
 const Hero = () => {
+  const HeroVariants = {
+    initial: { opacity: 0, x: -15, y: 15 },
+    animate: { opacity: 1, x: 0, y: 0, transition: { duration: 1.0 } },
+  };
   return (
     <section className="relative w-full h-screen mx-auto flex flex-row">
-      Hero
       <div
         className={`${styles.paddingX} absolute xs:ml-4 md:ml-16 top-[120px] max-w-7xl mx-auto flex flex-row items-start`}
       >
@@ -19,16 +22,22 @@ const Hero = () => {
           <div className="w-1 h-72 violet-gradient" />
         </div>
         <div className="">
-          <h1 className={`${styles.heroHeadText} text-white`}>
-            {" "}
-            Hi, I'm <span className="text-purple-400">Arjun Shah</span>
-          </h1>
-          <p
-            className={`${styles.heroSubText} text-gray-200 font-semibold font-sans text-md mt-2`}
+          <motion.div
+            variants={HeroVariants}
+            initial="initial"
+            animate="animate"
           >
-            I'm a curious and passionate Computer Science major,dedicated to
-            mastering the intricacies of React and Machine Learning.
-          </p>
+            <h1 className={`${styles.heroHeadText} text-white`}>
+              {" "}
+              Hi, I'm <span className="text-purple-400">Arjun Shah</span>
+            </h1>
+            <p
+              className={`${styles.heroSubText} text-gray-200 font-semibold font-sans text-md mt-2`}
+            >
+              I'm a curious and passionate Computer Science major,dedicated to
+              mastering the intricacies of Machine Learning and WebDev.
+            </p>
+          </motion.div>
         </div>
       </div>
       <ComputersCanvas />

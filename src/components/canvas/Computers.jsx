@@ -120,7 +120,7 @@ const ComputersCanvas = () => {
 
   return (
     <Canvas
-      frameloop="demand"
+      //frameloop="demand"
       dpr={[1, 2]}
       camera={{ position: [20, 3, 5], fov: 25 }}
       gl={{ preserveDrawingBuffer: true }}
@@ -131,7 +131,7 @@ const ComputersCanvas = () => {
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 4}
           autoRotate="true"
-          autoRotateSpeed={0.5}
+          autoRotateSpeed={1}
         />
         <Computers isMobile={isMobile} />
       </Suspense>
