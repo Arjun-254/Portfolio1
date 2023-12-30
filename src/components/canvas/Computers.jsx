@@ -1,38 +1,94 @@
-import React, { Suspense, useEffect, useState,useRef } from "react";
-import { Canvas , useFrame, useThree } from "@react-three/fiber";
-import { OrbitControls, Preload, useGLTF,SpotLight, useDepthBuffer  } from "@react-three/drei";
-import { AmbientLight, Vector3 } from 'three'
+import React, { Suspense, useEffect, useState, useRef } from "react";
+import { Canvas, useFrame, useThree } from "@react-three/fiber";
+import {
+  OrbitControls,
+  Preload,
+  useGLTF,
+  SpotLight,
+  useDepthBuffer,
+} from "@react-three/drei";
+import { AmbientLight, Vector3 } from "three";
 import CanvasLoader from "../Loader";
 
 const Computers = ({ isMobile }) => {
-  const depthBuffer = useDepthBuffer({ frames: 1 })
+  const depthBuffer = useDepthBuffer({ frames: 1 });
   const computer = useGLTF("./Porsche/scene.gltf");
-  
+
   function MovingSpot({ vec = new Vector3(), ...props }) {
-    const light = useRef()
-    const viewport = useThree((state) => state.viewport)
+    const light = useRef();
+    const viewport = useThree((state) => state.viewport);
     useFrame((state) => {
-      light.current.target.position.lerp(vec.set((state.mouse.x * viewport.width) / 2, (state.mouse.y * viewport.height) / 2, 0), 0.1)
-      light.current.target.updateMatrixWorld()
-    })
-    return <SpotLight castShadow ref={light} penumbra={1} distance={6} angle={0.35} attenuation={5} anglePower={4} intensity={2} {...props} />
+      light.current.target.position.lerp(
+        vec.set(
+          (state.mouse.x * viewport.width) / 2,
+          (state.mouse.y * viewport.height) / 2,
+          0
+        ),
+        0.1
+      );
+      light.current.target.updateMatrixWorld();
+    });
+    return (
+      <SpotLight
+        castShadow
+        ref={light}
+        penumbra={1}
+        distance={6}
+        angle={0.35}
+        attenuation={5}
+        anglePower={10}
+        intensity={25}
+        {...props}
+      />
+    );
   }
 
   return (
     <mesh>
-      {/*<MovingSpot depthBuffer={depthBuffer} color='#680CEE' position={[6, -2, -6]} intensity={20} /> 
-      <MovingSpot depthBuffer={depthBuffer} color="#680CEE" position={[4, -2, 8]} intensity={20}/>
+      <pointLight color="#680CEE" intensity={25} />
+      <hemisphereLight intensity={5.0} groundColor="black" />
+      {/*<MovingSpot
+        depthBuffer={depthBuffer}
+        color="white"
+        position={[2, -4, -0.5]}
+      />
+      <MovingSpot
+        depthBuffer={depthBuffer}
+        color="white"
+        position={[-6, -2, -6]}
+        intensity={100}
+      />
+      <MovingSpot
+        depthBuffer={depthBuffer}
+        color="white"
+        position={[4, -2, 8]}
+        intensity={100}
+      />
+      <MovingSpot
+        depthBuffer={depthBuffer}
+        color="white"
+         position={[6, -2, -6]}
+        intensity={100}
+      />
 
-      <MovingSpot depthBuffer={depthBuffer} color="#680CEE" position={[6, 2, -6]} intensity={20} />
-      <MovingSpot depthBuffer={depthBuffer} color="#680CEE" position={[4, 2, 8]} intensity={20}/>*/}
-      <hemisphereLight intensity={3.0} groundColor='black' />
-      <pointLight position={[0, 10, -5]} intensity={25} color='indigo' />
+      <MovingSpot
+        depthBuffer={depthBuffer}
+        color="white"
+        position={[6, 2, -6]}
+        intensity={100}
+      />
+      <MovingSpot
+        depthBuffer={depthBuffer}
+        color="white"
+        position={[4, 2, 8]}
+        intensity={100}
+  /> */}
 
       <primitive
         object={computer.scene}
-        scale={isMobile ? 1.1 : 1.9}
-        position={isMobile ? [0, -3, -2.2] : [0, -2, -.5]}
-        rotation={[-0.01, -0.2, -0.1]}
+        scale={isMobile ? 0.7 : 1.9}
+        position={isMobile ? [0.1, -0.2, -0.1] : [0, -2, -0.5]}
+        rotation={[0.1, -0.2, -0.1]}
       />
     </mesh>
   );
@@ -64,7 +120,7 @@ const ComputersCanvas = () => {
 
   return (
     <Canvas
-    frameloop='demand'
+      frameloop="demand"
       shadows
       dpr={[1, 2]}
       camera={{ position: [20, 3, 5], fov: 25 }}
@@ -73,9 +129,10 @@ const ComputersCanvas = () => {
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
           enableZoom={false}
-          maxPolarAngle={Math.PI/2}
-          minPolarAngle={Math.PI/4}
-          autoRotate='true' autoRotateSpeed={5}
+          maxPolarAngle={Math.PI / 2}
+          minPolarAngle={Math.PI / 4}
+          autoRotate="true"
+          autoRotateSpeed={0.5}
         />
         <Computers isMobile={isMobile} />
       </Suspense>
