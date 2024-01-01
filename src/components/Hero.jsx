@@ -40,7 +40,10 @@ const Hero = () => {
           </motion.div>
         </div>
       </div>
-      <ComputersCanvas />
+      <div className="justify-center items-center w-full">
+        <ComputersCanvas />
+      </div>
+
       <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
         <a>
           <div className=" flex justify-center items-center w-4 h-8 rounded-3xl border-4 border-stone-50">

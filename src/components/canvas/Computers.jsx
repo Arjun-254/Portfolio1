@@ -12,7 +12,7 @@ import CanvasLoader from "../Loader";
 
 const Computers = ({ isMobile }) => {
   const depthBuffer = useDepthBuffer({ frames: 1 });
-  const computer = useGLTF("./Porsche/scene.gltf");
+  const computer = useGLTF("./william_shakespeare_statue/scene.gltf");
 
   function MovingSpot({ vec = new Vector3(), ...props }) {
     const light = useRef();
@@ -28,16 +28,16 @@ const Computers = ({ isMobile }) => {
       );
       light.current.target.updateMatrixWorld();
     });
+    // Set castShadow to false to remove shadows
     return (
       <SpotLight
-        castShadow
         ref={light}
         penumbra={1}
         distance={6}
         angle={0.35}
         attenuation={5}
-        anglePower={10}
-        intensity={25}
+        anglePower={3}
+        intensity={100}
         {...props}
       />
     );
@@ -45,14 +45,11 @@ const Computers = ({ isMobile }) => {
 
   return (
     <mesh>
-      <pointLight color="#680CEE" intensity={25} />
-      <hemisphereLight intensity={5.0} groundColor="black" />
+      {/*<pointLight color="#680CEE" intensity={25} />*/}
+      <hemisphereLight intensity={1} groundColor="white" />
+
+      <MovingSpot color="#680CEE" position={[2.5, 3, -0.5]} />
       {/*<MovingSpot
-        depthBuffer={depthBuffer}
-        color="white"
-        position={[2, -4, -0.5]}
-      />
-      <MovingSpot
         depthBuffer={depthBuffer}
         color="white"
         position={[-6, -2, -6]}
@@ -86,9 +83,12 @@ const Computers = ({ isMobile }) => {
 
       <primitive
         object={computer.scene}
-        scale={isMobile ? 0.7 : 1.9}
-        position={isMobile ? [0.1, -0.2, -0.1] : [0, -2, -0.5]}
-        rotation={[0.1, -0.2, -0.1]}
+        // scale={isMobile ? 0.7 : 1.9}
+        // position={isMobile ? [0.1, -0.2, -0.1] : [0, -2, -0.5]}
+        // rotation={[0.1, -0.2, -0.1]}
+        scale={isMobile ? 2 : 3}
+        position={isMobile ? [-0.65, -2, -0.5] : [0, -3, -0.1]}
+        rotation={[0, -5, 0]} // Rotate around the center plane
       />
     </mesh>
   );
@@ -126,13 +126,25 @@ const ComputersCanvas = () => {
       gl={{ preserveDrawingBuffer: true }}
     >
       <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls
-          enableZoom={false}
-          maxPolarAngle={Math.PI / 2}
-          minPolarAngle={Math.PI / 4}
-          autoRotate="true"
-          autoRotateSpeed={1}
-        />
+        {isMobile ? (
+          <OrbitControls
+            enableZoom={false}
+            maxPolarAngle={Math.PI / 2}
+            minPolarAngle={Math.PI / 2}
+            // autoRotate="true"
+            // autoRotateSpeed={0.1}
+            initialPosition={[10, 0, 0]}
+          />
+        ) : (
+          <OrbitControls
+            enableZoom={false}
+            maxPolarAngle={Math.PI / 2}
+            minPolarAngle={Math.PI / 2}
+            autoRotate="true"
+            autoRotateSpeed={0.5}
+            initialPosition={[10, 0, 0]}
+          />
+        )}
         <Computers isMobile={isMobile} />
       </Suspense>
 
