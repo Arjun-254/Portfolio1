@@ -36,8 +36,6 @@ const Computers = ({ isMobile }) => {
         distance={6}
         angle={0.35}
         attenuation={5}
-        anglePower={3}
-        intensity={100}
         {...props}
       />
     );
@@ -49,11 +47,28 @@ const Computers = ({ isMobile }) => {
       <hemisphereLight intensity={1} groundColor="white" />
 
       {isMobile ? (
-        <MovingSpot color="#680CEE" position={[5, 3, -0.5]} />
+        <MovingSpot
+          color="#680CEE"
+          position={[4.5, 2.5, -0.5]}
+          intensity={10000}
+          anglePower={2}
+        />
       ) : (
-        <MovingSpot color="#680CEE" position={[2.5, 3, -0.5]} />
+        <MovingSpot
+          color="#680CEE"
+          position={[2.5, 3, -0.5]}
+          intensity={100}
+          anglePower={3}
+        />
       )}
-
+      {isMobile && (
+        <MovingSpot
+          color="#680CEE"
+          position={[-4.5, 2.5, -0.5]}
+          intensity={10000}
+          anglePower={2}
+        />
+      )}
       {/*<MovingSpot
         depthBuffer={depthBuffer}
         color="white"
