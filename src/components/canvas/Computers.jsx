@@ -48,7 +48,12 @@ const Computers = ({ isMobile }) => {
       {/*<pointLight color="#680CEE" intensity={25} />*/}
       <hemisphereLight intensity={1} groundColor="white" />
 
-      <MovingSpot color="#680CEE" position={[2.5, 3, -0.5]} />
+      {isMobile ? (
+        <MovingSpot color="#680CEE" position={[5, 3, -0.5]} />
+      ) : (
+        <MovingSpot color="#680CEE" position={[2.5, 3, -0.5]} />
+      )}
+
       {/*<MovingSpot
         depthBuffer={depthBuffer}
         color="white"
