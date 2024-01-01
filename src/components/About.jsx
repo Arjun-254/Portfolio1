@@ -8,11 +8,6 @@ import img2 from "../assets/creator.png";
 import { useInView } from "framer-motion";
 
 const About = () => {
-  const tiltCardVariants = {
-    initial: { opacity: 0, y: 20 },
-    animate: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-  };
-
   function Section({ children }) {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true });
@@ -21,9 +16,9 @@ const About = () => {
       <section ref={ref}>
         <span
           style={{
-            transform: isInView
-              ? "none"
-              : "translateX(-200px) translateY(-200px)  perspective(500px)",
+            transform: `translateX(${
+              isInView ? 0 : "-100px"
+            }) translateY(100px)`,
             opacity: isInView ? 1 : 0,
             transition:
               "opacity 1.3s cubic-bezier(0.17, 0.55, 0.55, 1), transform 1.3s cubic-bezier(0.17, 0.55, 0.55, 1)",
@@ -53,7 +48,12 @@ const About = () => {
       </p>
       <div className="mt-5 mx-auto flex flex-wrap gap-10 justify-center items">
         <Section>
-          <Tilt className="">
+          <Tilt
+            className=""
+            tiltReverse={true}
+            tiltMaxAngleX={10}
+            tiltMaxAngleY={10}
+          >
             <div className="w-auto green-pink-gradient rounded-[20px] shadow-card p-[1px]">
               <div className="bg-gradient-to-r from-purple-700 to-blue-900 rounded-[20px] py-16 px-6 flex justify-evenly items-center flex-col group">
                 <p className="font-bold max-w-m"> Comp-Sci Major </p>
@@ -64,7 +64,12 @@ const About = () => {
         </Section>
 
         <Section>
-          <Tilt className="">
+          <Tilt
+            className=""
+            tiltReverse={true}
+            tiltMaxAngleX={10}
+            tiltMaxAngleY={10}
+          >
             <div className="w-auto green-pink-gradient rounded-[20px] shadow-card p-[1px]">
               <div className="bg-gradient-to-r from-purple-700 to-blue-900 rounded-[20px] py-16 px-6 flex justify-evenly items-center flex-col group">
                 <p className="font-bold "> Web Developer </p>
@@ -75,7 +80,12 @@ const About = () => {
         </Section>
 
         <Section>
-          <Tilt className="">
+          <Tilt
+            className=""
+            tiltReverse={true}
+            tiltMaxAngleX={10}
+            tiltMaxAngleY={10}
+          >
             <div className="w-auto green-pink-gradient rounded-[20px] shadow-card p-[1px]">
               <div className="bg-gradient-to-r from-purple-700 to-blue-900 rounded-[20px] py-16 px-6 flex justify-evenly items-center flex-col group">
                 <p className="font-bold ">AI/ML Developer</p>
