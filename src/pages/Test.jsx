@@ -16,7 +16,7 @@ export const Test = () => {
       {!next && (
         <div className="min-h-screen flex flex-row justify-center items-center relative">
           {!laptopOpen && (
-            <div className="flex flex-col justify-center items-center w-5/6 text-center">
+            <div className="flex flex-col justify-center items-center w-5/6 text-center mt-[-100px]">
               <p className="font-sans text-gray-200 text-lg z-10">
                 <Typewriter
                   words={[
