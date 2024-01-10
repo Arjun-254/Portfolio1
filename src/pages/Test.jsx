@@ -58,7 +58,7 @@ export const Test = () => {
             onNextChange={(isNext) => setNext(isNext)}
           />
           {laptopOpen && (
-            <div className="absolute bottom-10 flex justify-center items-center">
+            <div className="absolute top-10 flex justify-center items-center">
               <p className="font-sans text-gray-200 text-lg">
                 <Typewriter
                   words={["(Click on the Screen)"]}
