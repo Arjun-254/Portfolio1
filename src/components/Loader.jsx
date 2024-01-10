@@ -1,10 +1,11 @@
 import { Html, useProgress } from "@react-three/drei";
+import { InfinitySpin } from "react-loader-spinner";
 
 const CanvasLoader = () => {
   const { progress } = useProgress();
   return (
     <Html
-      as='div'
+      as="div"
       center
       style={{
         display: "flex",
@@ -13,16 +14,17 @@ const CanvasLoader = () => {
         flexDirection: "column",
       }}
     >
-      <span className='canvas-loader'></span>
+      <span className="canvas-loader"></span>
+      <InfinitySpin width="200" color="#680CEE" />
       <p
         style={{
           fontSize: 14,
-          color: "#F1F1F1",
+          color: "white",
           fontWeight: 800,
           marginTop: 40,
         }}
       >
-        {progress.toFixed(2)}%
+        <div className="white">{progress.toFixed(2)}%</div>
       </p>
     </Html>
   );
