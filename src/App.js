@@ -1,18 +1,16 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import About from "./components/About";
-import Hero from "./components/Hero";
-import Navbar from "./components/Navbar";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Landing } from "./pages/Landing";
+import { Test } from "./pages/Test";
 
 export default function App() {
   return (
-    <Router>
-      <div className="relative z-0 bg-gradient-to-r from-black via-gray-900 to-black">
-        <div className="bg-cover bg-no-repeat bg-center">
-          <Navbar />
-          <Hero />
-        </div>
-        <About />
-      </div>
-    </Router>
+    <div className="App">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Landing />} />
+          // <Route path="/Test" element={<Test />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }

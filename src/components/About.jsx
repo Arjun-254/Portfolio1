@@ -26,19 +26,36 @@ const Card = ({ title, imageSrc }) => {
 
 const About = () => {
   useEffect(() => {
-    Aos.init({ duration: 500, once: false, easing: "ease-in", offset: 120 });
+    Aos.init({
+      duration: 1000,
+      once: false,
+      easing: "cubic-bezier(.02,.66,.85,.19)",
+      offset: 120,
+    });
   }, []);
 
   return (
-    <div className="pb-20">
-      <div className="flex justify-center items-center flex-column">
+    <div className="pb-20 mt-[-100px] lg:mt-0 ] ">
+      <div
+        className="flex justify-center items-center flex-column "
+        data-aos="fade-down"
+        data-aos-mirror="true"
+      >
         <p className={`${styles.sectionSubText}`}>Introduction</p>
       </div>
-      <div className="flex justify-center items-center flex-column">
+      <div
+        className="flex justify-center items-center flex-column"
+        data-aos="fade-down"
+        data-aos-mirror="true"
+      >
         <h1 className={`${styles.sectionHeadText}`}>Overview</h1>
       </div>
 
-      <p className="mx-10 mt-4 text-secondary text-[17px] w-3xl flex justify-center items-center">
+      <p
+        className="mx-10 mt-4 text-secondary text-[17px] w-3xl flex justify-center items-cente text-center"
+        data-aos="fade-down"
+        data-aos-mirror="true"
+      >
         I am a highly motivated college student eager to start an internship or
         research opportunity that will allow me to utilize my problem-solving
         skills and attention to detail to further develop my abilities in the
