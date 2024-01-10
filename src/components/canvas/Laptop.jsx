@@ -101,7 +101,7 @@ function Model({ open, hinge, scale, ...props }) {
   );
 }
 
-function Laptop({ onOpenChange }) {
+function Laptop({ onOpenChange, onNextChange }) {
   // This flag controls open state, alternates between true & false
   const [open, setOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -162,7 +162,8 @@ function Laptop({ onOpenChange }) {
             setOpen(!open);
             onOpenChange(!open); // Notify the parent component about the open state change
             if (open) {
-              navigate("/next");
+              //navigate("/next");
+              onNextChange(true);
             }
           }}
         >

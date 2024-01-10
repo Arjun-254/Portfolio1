@@ -3,45 +3,53 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 import ComputersCanvas from "./canvas/Computers";
 import { Typewriter } from "react-simple-typewriter";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Hero = () => {
   const HeroVariants = {
     initial: { opacity: 0, x: -15, y: 15 },
     animate: { opacity: 1, x: 0, y: 0, transition: { duration: 1.0 } },
   };
+  useEffect(() => {
+    Aos.init({
+      duration: 2500,
+      once: false,
+      easing: "cubic-bezier(.02,.66,.85,.19)",
+      offset: 100,
+    });
+  }, []);
 
   return (
-    <section className="relative w-full h-screen mx-auto flex flex-row">
+    <section
+      className="relative w-full h-screen mx-auto flex flex-row"
+      data-aos="fade-down"
+      data-aos-mirror="true"
+    >
       <div
         className={`${styles.paddingX} absolute xs:ml-4 md:ml-16 top-[120px] max-w-7xl mx-auto flex flex-row items-start`}
       >
         <div className="">
-          <motion.div
-            variants={HeroVariants}
-            initial="initial"
-            animate="animate"
+          <h1
+            className={`${styles.heroHeadText} text-white`}
+            style={{
+              textShadow: "0 0 5px rgba(108, 103, 249, 0.88)",
+            }}
           >
-            <h1
-              className={`${styles.heroHeadText} text-white`}
-              style={{
-                textShadow: "0 0 5px rgba(108, 103, 249, 0.88)",
-              }}
-            >
-              Hi, I'm <span className="text-violet-600">Arjun Shah</span>
-            </h1>
-            <p
-              className={`${styles.heroSubText} text-gray-400 font-sans text-md mt-2`}
-            >
-              <Typewriter
-                words={[
-                  "I'm a curious and passionate Computer Science major, dedicated to mastering the intricacies of Machine Learning and WebDev.",
-                ]}
-                cursor
-                cursorStyle=""
-                loop={1}
-              />
-            </p>
-          </motion.div>
+            Hi, I'm <span className="text-violet-600">Arjun Shah</span>
+          </h1>
+          <p
+            className={`${styles.heroSubText} text-gray-400 font-sans text-md mt-2`}
+          >
+            <Typewriter
+              words={[
+                "I'm a curious and passionate Computer Science major, dedicated to mastering the intricacies of Machine Learning and WebDev.",
+              ]}
+              cursor
+              cursorStyle=""
+              loop={1}
+            />
+          </p>
         </div>
       </div>
       <ComputersCanvas />
