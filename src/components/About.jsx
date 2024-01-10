@@ -35,7 +35,7 @@ const About = () => {
   }, []);
 
   return (
-    <div className="pb-20 mt-[-100px] lg:mt-0 ] ">
+    <div className="pb-20 mt-[-100px] md:mt-10 ">
       <div
         className="flex justify-center items-center flex-column "
         data-aos="fade-down"
