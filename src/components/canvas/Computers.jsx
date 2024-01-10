@@ -6,6 +6,8 @@ import {
   useGLTF,
   SpotLight,
   useDepthBuffer,
+  Float,
+  Decal,
 } from "@react-three/drei";
 import { AmbientLight, Vector3 } from "three";
 import CanvasLoader from "../Loader";
@@ -69,43 +71,9 @@ const Computers = ({ isMobile }) => {
           anglePower={2}
         />
       )}
-      {/*<MovingSpot
-        depthBuffer={depthBuffer}
-        color="white"
-        position={[-6, -2, -6]}
-        intensity={100}
-      />
-      <MovingSpot
-        depthBuffer={depthBuffer}
-        color="white"
-        position={[4, -2, 8]}
-        intensity={100}
-      />
-      <MovingSpot
-        depthBuffer={depthBuffer}
-        color="white"
-         position={[6, -2, -6]}
-        intensity={100}
-      />
-
-      <MovingSpot
-        depthBuffer={depthBuffer}
-        color="white"
-        position={[6, 2, -6]}
-        intensity={100}
-      />
-      <MovingSpot
-        depthBuffer={depthBuffer}
-        color="white"
-        position={[4, 2, 8]}
-        intensity={100}
-  /> */}
 
       <primitive
         object={computer.scene}
-        // scale={isMobile ? 0.7 : 1.9}
-        // position={isMobile ? [0.1, -0.2, -0.1] : [0, -2, -0.5]}
-        // rotation={[0.1, -0.2, -0.1]}
         scale={isMobile ? 2 : 3}
         position={isMobile ? [-0.65, -2, -0.5] : [0, -3, -0.1]}
         rotation={[0, -5, 0]} // Rotate around the center plane
@@ -160,12 +128,14 @@ const ComputersCanvas = () => {
             enableZoom={false}
             maxPolarAngle={Math.PI / 2}
             minPolarAngle={Math.PI / 2}
-            autoRotate="true"
-            autoRotateSpeed={0.5}
+            // autoRotate="true"
+            // autoRotateSpeed={0.5}
             initialPosition={[10, 0, 0]}
           />
         )}
-        <Computers isMobile={isMobile} />
+        <Float>
+          <Computers isMobile={isMobile} />
+        </Float>
       </Suspense>
 
       <Preload all />

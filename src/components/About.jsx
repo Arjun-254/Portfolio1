@@ -1,34 +1,33 @@
-import { useRef } from "react";
-
-import Tilt from "react-parallax-tilt";
+import React, { useEffect } from "react";
 import { styles } from "../styles";
+import Tilt from "react-parallax-tilt";
 import img from "../assets/web.png";
 import img1 from "../assets/mobile.png";
 import img2 from "../assets/creator.png";
-import { useInView } from "framer-motion";
+import Aos from "aos";
+import "aos/dist/aos.css";
+
+const Card = ({ title, imageSrc }) => {
+  return (
+    <Tilt className="" tiltReverse={true} tiltMaxAngleX={10} tiltMaxAngleY={10}>
+      <div
+        className=" min-w-fit green-pink-gradient rounded-[20px] shadow-card p-[1px]"
+        data-aos="fade-down"
+        data-aos-mirror="true"
+      >
+        <div className="bg-gradient-to-r from-purple-700 to-blue-900 rounded-[20px] py-16 px-6 flex justify-evenly items-center flex-col group">
+          <p className="font-bold max-w-m">{title}</p>
+          <img src={imageSrc} alt={title} className="w-16 h-16 mt-1" />
+        </div>
+      </div>
+    </Tilt>
+  );
+};
 
 const About = () => {
-  function Section({ children }) {
-    const ref = useRef(null);
-    const isInView = useInView(ref, { once: true });
-
-    return (
-      <section ref={ref}>
-        <span
-          style={{
-            transform: `translateX(${
-              isInView ? 0 : "-100px"
-            }) translateY(100px)`,
-            opacity: isInView ? 1 : 0,
-            transition:
-              "opacity 1.3s cubic-bezier(0.17, 0.55, 0.55, 1), transform 1.3s cubic-bezier(0.17, 0.55, 0.55, 1)",
-          }}
-        >
-          {children}
-        </span>
-      </section>
-    );
-  }
+  useEffect(() => {
+    Aos.init({ duration: 500, once: false, easing: "ease-in", offset: 120 });
+  }, []);
 
   return (
     <div className="pb-20">
@@ -46,54 +45,11 @@ const About = () => {
         field of computer science. I'm a quick learner and excited to learn new
         frameworks and languages.
       </p>
+
       <div className="mt-5 mx-auto flex flex-wrap gap-10 justify-center items">
-        <Section>
-          <Tilt
-            className=""
-            tiltReverse={true}
-            tiltMaxAngleX={10}
-            tiltMaxAngleY={10}
-          >
-            <div className="w-auto green-pink-gradient rounded-[20px] shadow-card p-[1px]">
-              <div className="bg-gradient-to-r from-purple-700 to-blue-900 rounded-[20px] py-16 px-6 flex justify-evenly items-center flex-col group">
-                <p className="font-bold max-w-m"> Comp-Sci Major </p>
-                <img src={img} className="w-16 h-16 mt-1" />
-              </div>
-            </div>
-          </Tilt>
-        </Section>
-
-        <Section>
-          <Tilt
-            className=""
-            tiltReverse={true}
-            tiltMaxAngleX={10}
-            tiltMaxAngleY={10}
-          >
-            <div className="w-auto green-pink-gradient rounded-[20px] shadow-card p-[1px]">
-              <div className="bg-gradient-to-r from-purple-700 to-blue-900 rounded-[20px] py-16 px-6 flex justify-evenly items-center flex-col group">
-                <p className="font-bold "> Web Developer </p>
-                <img src={img1} className="w-16 h-16 mt-1" />
-              </div>
-            </div>
-          </Tilt>
-        </Section>
-
-        <Section>
-          <Tilt
-            className=""
-            tiltReverse={true}
-            tiltMaxAngleX={10}
-            tiltMaxAngleY={10}
-          >
-            <div className="w-auto green-pink-gradient rounded-[20px] shadow-card p-[1px]">
-              <div className="bg-gradient-to-r from-purple-700 to-blue-900 rounded-[20px] py-16 px-6 flex justify-evenly items-center flex-col group">
-                <p className="font-bold ">AI/ML Developer</p>
-                <img src={img2} className="w-16 h-16 mt-1" />
-              </div>
-            </div>
-          </Tilt>
-        </Section>
+        <Card title="Comp-Sci Major" imageSrc={img} />
+        <Card title="Web Developer" imageSrc={img1} />
+        <Card title="AI/ML Developer" imageSrc={img2} />
       </div>
     </div>
   );

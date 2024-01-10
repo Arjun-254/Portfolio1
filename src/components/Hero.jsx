@@ -2,10 +2,6 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import ComputersCanvas from "./canvas/Computers";
-import ComputersCanvas2 from "./canvas/Computers2";
-import BallCanvas from "./canvas/Ball";
-import EarthCanvas from "./canvas/Earth";
-import Tilt from "react-parallax-tilt";
 
 const Hero = () => {
   const HeroVariants = {
