@@ -26,7 +26,7 @@ export const Test = () => {
               <div className="flex-1 flex flex-col p-4 text-gray-200 font-mono ">
                 <div className=" mb-2">
                   <p className="text-md font-mono">
-                    <strong>Arjuns-MacBook-Pro : </strong>
+                    <strong>Arjuns-Portfolio : </strong>
                     <Typewriter
                       words={[
                         " Greetings and welcome to my portfolio. Delve into the enigma below to unravel the essence of my craft.",
@@ -82,7 +82,7 @@ export const Test = () => {
               <div className="flex-1 flex flex-col p-4 text-gray-200 font-mono ">
                 <div className=" mb-2">
                   <p className="text-md font-mono">
-                    <strong>Arjuns-MacBook-Pro : </strong>
+                    <strong>Arjuns-Portfolio : </strong>
                     <Typewriter
                       words={[" Click on the Screen "]}
                       cursor
