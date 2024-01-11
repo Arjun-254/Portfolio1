@@ -46,7 +46,7 @@ export const Test = () => {
                 <a>
                   <motion.div
                     animate={{
-                      y: [-5, 5, -5],
+                      y: [-10, 10, -10],
                     }}
                     transition={{
                       duration: 2,
@@ -67,12 +67,12 @@ export const Test = () => {
             </div>
           )}
           <Laptop
-            className={`z-20`}
+            className={`z-40`}
             onOpenChange={(isOpen) => setLaptopOpen(isOpen)}
             onNextChange={(isNext) => setNext(isNext)}
           />
           {laptopOpen && (
-            <div className="w-5/6 lg:w-1/2 h-fit bg-gray-800 rounded-md flex flex-col z-10 absolute bottom-10">
+            <div className="w-5/6 lg:w-1/2 h-fit bg-gray-800 rounded-md flex flex-col z-10 absolute top-5">
               <div className="bg-gray-700 flex flex-row items-center justify-end rounded-md p-2">
                 <div className="w-3 h-3 rounded-full bg-red-500 mr-1"></div>
                 <div className="w-3 h-3 rounded-full bg-yellow-400 mr-1"></div>
