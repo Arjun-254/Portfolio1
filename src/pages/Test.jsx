@@ -14,25 +14,39 @@ export const Test = () => {
   return (
     <>
       {!next && (
-        <div className="min-h-screen flex flex-row justify-center items-center relative">
+        <div className="min-h-screen flex flex-row justify-center items-center relative ">
           {!laptopOpen && (
-            <div className="flex flex-col justify-center items-center w-5/6 text-center mt-[-100px]">
-              <p className="font-sans text-gray-200 text-lg z-10">
-                <Typewriter
-                  words={[
-                    "Greetings and welcome to my portfolio. Delve into the enigma below to unravel the essence of my craft.",
-                    "Click on the Laptop",
-                  ]}
-                  cursor
-                  cursorStyle=""
-                  loop={1}
-                />
-              </p>
+            <div className="w-5/6 lg:w-1/2 h-52 bg-gray-800 rounded-md flex flex-col z-10 ">
+              <div className="bg-gray-700 flex flex-row items-center justify-end rounded-md p-2">
+                <div className="w-3 h-3 rounded-full bg-red-500 mr-1"></div>
+                <div className="w-3 h-3 rounded-full bg-yellow-400 mr-1"></div>
+                <div className="w-3 h-3 rounded-full bg-green-500"></div>
+              </div>
+
+              <div className="flex-1 flex flex-col p-4 text-gray-200 font-mono ">
+                <div className=" mb-2">
+                  <p className="text-md font-mono">
+                    <strong>Arjuns-MacBook-Pro : </strong>
+                    <Typewriter
+                      words={[
+                        " Greetings and welcome to my portfolio. Delve into the enigma below to unravel the essence of my craft.",
+                        " Click on the Laptop to continue",
+                      ]}
+                      cursor
+                      cursorStyle="|"
+                      loop={1}
+                      typeSpeed={40}
+                      deleteSpeed={20}
+                      delaySpeed={10000}
+                    />
+                  </p>
+                </div>
+              </div>
               <div className="w-full mt-10 flex justify-center items-center z-10">
                 <a>
                   <motion.div
                     animate={{
-                      y: [-10, 10, -10],
+                      y: [-5, 5, -5],
                     }}
                     transition={{
                       duration: 2,
@@ -58,15 +72,29 @@ export const Test = () => {
             onNextChange={(isNext) => setNext(isNext)}
           />
           {laptopOpen && (
-            <div className="absolute top-10 flex justify-center items-center">
-              <p className="font-sans text-gray-200 text-lg">
-                <Typewriter
-                  words={["(Click on the Screen)"]}
-                  cursor
-                  cursorStyle=""
-                  loop={1}
-                />
-              </p>
+            <div className="w-5/6 lg:w-1/2 h-fit bg-gray-800 rounded-md flex flex-col z-10 absolute bottom-10">
+              <div className="bg-gray-700 flex flex-row items-center justify-end rounded-md p-2">
+                <div className="w-3 h-3 rounded-full bg-red-500 mr-1"></div>
+                <div className="w-3 h-3 rounded-full bg-yellow-400 mr-1"></div>
+                <div className="w-3 h-3 rounded-full bg-green-500"></div>
+              </div>
+
+              <div className="flex-1 flex flex-col p-4 text-gray-200 font-mono ">
+                <div className=" mb-2">
+                  <p className="text-md font-mono">
+                    <strong>Arjuns-MacBook-Pro : </strong>
+                    <Typewriter
+                      words={[" Click on the Screen "]}
+                      cursor
+                      cursorStyle="|"
+                      loop={1}
+                      typeSpeed={80}
+                      deleteSpeed={20}
+                      delaySpeed={10000}
+                    />
+                  </p>
+                </div>
+              </div>
             </div>
           )}
         </div>

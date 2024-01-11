@@ -105,7 +105,6 @@ function Laptop({ onOpenChange, onNextChange }) {
   // This flag controls open state, alternates between true & false
   const [open, setOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  const navigate = useNavigate();
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(max-width: 500px)");
@@ -140,10 +139,10 @@ function Laptop({ onOpenChange, onNextChange }) {
         padding: 0,
       }}
     >
-      <Canvas dpr={[1, 2]} camera={{ position: [0, 0, 0], fov: 35 }}>
+      <Canvas dpr={[1, 2]} camera={{ position: [0, -2, 0], fov: 35 }}>
         <three.pointLight
           position={[10, 10, 10]}
-          intensity={1.5}
+          intensity={8}
           color={props.open.to([0, 1], ["#f0f0f0", "#1903EF"])}
         />
 
