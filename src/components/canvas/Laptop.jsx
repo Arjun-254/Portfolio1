@@ -169,7 +169,7 @@ function Laptop({ onOpenChange, onNextChange }) {
           <Model
             open={open}
             hinge={props.open.to([0, 1], [1.575, -0.425])}
-            scale={isMobile ? 0.5 : 1}
+            scale={isMobile ? 0.5 : 0.9}
           />
         </group>
       </Canvas>
