@@ -40,7 +40,7 @@ export const Carousel = () => {
                 alt={`Image ${index + 1}`}
                 className="w-full h-full -z-0 absolute rounded-md transition-all transform group-hover:scale-105"
               />
-              <div className="absolute inset-0 flex items-center justify-center text-white text-lg opacity-90 sm:opacity-0 group-hover:opacity-100 transition-all bg-black bg-opacity-90 rounded-md">
+              <div className="absolute inset-0 flex items-center justify-center text-white text-lg opacity-100 sm:opacity-0 group-hover:opacity-100 transition-all bg-black bg-opacity-90 rounded-md">
                 <div className="text-center ">
                   <p className="text-3xl sm:text-4xl md:text-5xl font-extrabold font-sans">
                     {data[index].name}
