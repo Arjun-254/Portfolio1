@@ -27,7 +27,7 @@ function Model({ open, hinge, scale, ...props }) {
     state.camera.lookAt(0, 0, 0);
     group.current.rotation.x = THREE.MathUtils.lerp(
       group.current.rotation.x,
-      open ? Math.cos(t / 2) / 8 + 0.25 : 0,
+      open ? Math.cos(t / 2) / 8 + 0.25 : Math.cos(t / 2) / 8 + 0.25,
       0.1
     );
     group.current.rotation.y = THREE.MathUtils.lerp(
@@ -49,6 +49,13 @@ function Model({ open, hinge, scale, ...props }) {
 
   const texture = new THREE.TextureLoader().load(screenImage);
 
+  // Define a skin material for the metal casing
+  const skinMaterial = new THREE.MeshStandardMaterial({
+    color: "#B4B4B7", // Adjust the color as needed
+    roughness: 0.5, // Adjust as needed
+    metalness: 0.5, // Adjust as needed
+  });
+
   return (
     <group
       ref={group}
@@ -60,10 +67,8 @@ function Model({ open, hinge, scale, ...props }) {
     >
       <three.group rotation-x={hinge} position={[0, -0.04, 0.41]}>
         <group position={[0, 2.96, -0.13]} rotation={[Math.PI / 2, 0, 0]}>
-          <mesh
-            material={materials.aluminium}
-            geometry={nodes["Cube008"].geometry}
-          />
+          {/* Apply the skin material to the metal casing */}
+          <mesh material={skinMaterial} geometry={nodes["Cube008"].geometry} />
           <mesh
             material={materials["matte.001"]}
             geometry={nodes["Cube008_1"].geometry}
@@ -102,7 +107,6 @@ function Model({ open, hinge, scale, ...props }) {
 }
 
 function Laptop({ onOpenChange, onNextChange }) {
-  // This flag controls open state, alternates between true & false
   const [open, setOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -121,7 +125,6 @@ function Laptop({ onOpenChange, onNextChange }) {
     };
   }, []);
 
-  // We turn this into a spring animation that interpolates between 0 and 1
   const props = useSpring({ open: Number(open) });
 
   return (
@@ -129,9 +132,9 @@ function Laptop({ onOpenChange, onNextChange }) {
       style={{
         background: props.open.to([0, 1], ["#020617", "#030712"]),
         transition: "background 0.5s ease-in",
-        width: "100vw", // Set width to 100% of viewport width
-        height: "100vh", // Set height to 100% of viewport height
-        overflow: "hidden", // Hide overflow to prevent scrolling
+        width: "100vw",
+        height: "100vh",
+        overflow: "hidden",
         position: "absolute",
         top: 0,
         left: 0,
@@ -142,7 +145,7 @@ function Laptop({ onOpenChange, onNextChange }) {
       <Canvas dpr={[1, 2]} camera={{ position: [0, -2, 0], fov: 35 }}>
         <three.pointLight
           position={[10, 10, 10]}
-          intensity={8}
+          intensity={5}
           color={props.open.to([0, 1], ["#f0f0f0", "#1903EF"])}
         />
 
@@ -159,9 +162,8 @@ function Laptop({ onOpenChange, onNextChange }) {
           rotation={[0, Math.PI, 0]}
           onClick={() => {
             setOpen(!open);
-            onOpenChange(!open); // Notify the parent component about the open state change
+            onOpenChange(!open);
             if (open) {
-              //navigate("/next");
               onNextChange(true);
             }
           }}
@@ -169,7 +171,7 @@ function Laptop({ onOpenChange, onNextChange }) {
           <Model
             open={open}
             hinge={props.open.to([0, 1], [1.575, -0.425])}
-            scale={isMobile ? 0.5 : 0.9}
+            scale={isMobile ? 0.6 : 0.9}
           />
         </group>
       </Canvas>

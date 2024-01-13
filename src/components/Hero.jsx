@@ -48,6 +48,8 @@ const Hero = () => {
               cursor
               cursorStyle=""
               loop={1}
+              typeSpeed={20}
+              deleteSpeed={20}
             />
           </p>
         </div>

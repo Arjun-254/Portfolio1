@@ -4,8 +4,10 @@ import Tilt from "react-parallax-tilt";
 import img from "../assets/web.png";
 import img1 from "../assets/mobile.png";
 import img2 from "../assets/creator.png";
+
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { Carousel } from "./Carousel";
 
 const Card = ({ title, imageSrc }) => {
   return (
@@ -67,6 +69,18 @@ const About = () => {
         <Card title="Comp-Sci Major" imageSrc={img} />
         <Card title="Web Developer" imageSrc={img1} />
         <Card title="AI/ML Developer" imageSrc={img2} />
+      </div>
+
+      <div
+        className="flex justify-center items-center flex-column"
+        data-aos="fade-down"
+        data-aos-mirror="true"
+      >
+        <h1 className={`${styles.sectionHeadText} pt-10`}>Achievements</h1>
+      </div>
+
+      <div data-aos="fade-down" data-aos-mirror="true">
+        <Carousel />
       </div>
     </div>
   );

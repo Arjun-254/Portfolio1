@@ -39,7 +39,7 @@ export const Test = () => {
 
               <div className="flex-1 flex flex-col p-4 text-gray-200 font-mono ">
                 <div className=" mb-2">
-                  <p className="text-md font-mono">
+                  <p className="text-sm sm:text-sm lg:text-md font-mono">
                     <strong>Arjuns-Portfolio : </strong>
                     <Typewriter
                       words={[
@@ -56,11 +56,11 @@ export const Test = () => {
                   </p>
                 </div>
               </div>
-              <div className="w-full bottom-0 flex justify-center items-center z-10">
+              <div className="w-full bottom-2 flex justify-center items-center z-10">
                 <a>
                   <motion.div
                     animate={{
-                      y: [-10, 10, -10],
+                      y: [-5, 5, -5],
                     }}
                     transition={{
                       duration: 2,
