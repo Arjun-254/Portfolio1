@@ -9,6 +9,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { Carousel } from "./Carousel";
 import Projects from "./Projects";
+import Research from "./Research";
 
 const Card = ({ title, imageSrc }) => {
   return (
@@ -62,11 +63,12 @@ const About = () => {
         a SDE intern at HDFC Securities. Additionally, I bring valuable research
         experience to complement my academic background.
       </p>
-      <div className="mt-5 mx-auto flex flex-wrap gap-10 justify-center items">
+      <div className="mt-5 mx-auto flex flex-wrap gap-10 justify-center items w-11/12">
         <Card title="Comp-Sci Major" imageSrc={img} />
         <Card title="Web Developer" imageSrc={img1} />
         <Card title="AI/ML Developer" imageSrc={img2} />
       </div>
+
       <div
         className="flex justify-center items-center flex-column"
         data-aos="fade-down"
@@ -77,6 +79,23 @@ const About = () => {
       <div className="my-4" data-aos="fade-down" data-aos-mirror="true">
         <Carousel />
       </div>
+
+      <div
+        className="flex justify-center items-center flex-column"
+        data-aos="fade-down"
+        data-aos-mirror="true"
+      >
+        <h1 className={`${styles.sectionHeadText} `}>Research</h1>
+      </div>
+
+      <div
+        className="my-4 mx-auto flex-grow overflow-y-auto overflow-x-hidden no-scrollbar rounded-xl w-5/6 sm:w-5/6 md:w-5/6"
+        data-aos="fade-down"
+        data-aos-mirror="true"
+      >
+        <Research />
+      </div>
+
       <div
         className="flex justify-center items-center flex-column"
         data-aos="fade-down"
@@ -84,6 +103,7 @@ const About = () => {
       >
         <h1 className={`${styles.sectionHeadText} `}>Projects</h1>
       </div>
+
       <div
         className="my-4 mx-auto flex-grow overflow-y-auto overflow-x-hidden no-scrollbar rounded-xl w-5/6 sm:w-5/6 md:w-5/6"
         data-aos="fade-down"
