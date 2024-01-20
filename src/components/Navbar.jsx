@@ -1,38 +1,48 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import image from "../assets/logo.png";
+import { FaGithub } from "react-icons/fa6";
 
 export default function Navbar() {
   const navigate = useNavigate();
   return (
-    <div className="flex flex-row  ">
+    <div className="flex flex-row">
       <header className="absolute inset-x-0 top-0  bg-gradient-to-r from-gray-800 to-black">
         <nav
           className="flex flex-row items-center justify-between p-2  lg:px-8 "
           aria-label="Global"
         >
-          <div className="flex lg:flex-1">
-            <a href="#" className="-m-1.5 p-1.5">
-              <span className="sr-only">Your Company</span>
-              <img className="h-8 w-auto" src={image} alt="" />
+          <div className="flex lg:flex-1 z-10">
+            <a
+              href="https://github.com/Arjun-254"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaGithub className="w-6 h-6" />
             </a>
           </div>
-          <div className="flex lg:hidden">
+          <div className="flex lg:hidden z-10">
             <button
               type="button"
               className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
             >
-              <span className="sr-only">Open main menu</span>
-              <p className="text-xs font-semibold leading-6 text-purple-400 hover:font-extrabold hover:shadow-xl transition-all ease-in duration-100 p-2">
-                {" "}
-                Arjun Shah | WebDev + ML
-              </p>
+              <a
+                href="https://drive.google.com/file/d/1AwSZUSmziBhfy4b_OC9j6az12qHm3_mE/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs font-sans leading-6 text-white bg-gradient-to-r from-violet-800 to-violet-950 rounded-lg p-2"
+                style={{
+                  boxShadow: "0 0 5px rgba(108, 103, 249, 0.88)",
+                }}
+              >
+                Resume
+              </a>
             </button>
           </div>
           <div className="hidden lg:flex lg:gap-x-12">
             <a
               href="#"
-              className="text-md font-semibold leading-6 text-gray-200 hover:font-extrabold hover:shadow-xl transition-all ease-in duration-100 p-2 rounded-lg "
+              className=" z-10 text-md font-semibold leading-6 text-gray-200 hover:font-extrabold hover:shadow-xl transition-all ease-in duration-100 p-2 rounded-lg "
               onClick={() => {
                 navigate("/");
               }}
@@ -42,11 +52,18 @@ export default function Navbar() {
 
             {/* <a href="#" className="text-sm font-semibold leading-6 text-gray-200 hover:font-extrabold hover:shadow-xl transition-all ease-in duration-100 p-2 rounded-lg">Find Jobs</a>*/}
           </div>
-          <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <p className="text-md font-semibold leading-6 text-purple-400 hover:font-extrabold hover:shadow-xl transition-all ease-in duration-100 p-2">
-              {" "}
-              Arjun Shah | WebDev + ML
-            </p>
+          <div className="hidden lg:flex lg:flex-1 lg:justify-end z-10">
+            <a
+              href="https://drive.google.com/file/d/1AwSZUSmziBhfy4b_OC9j6az12qHm3_mE/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm font-sans leading-6 text-white bg-gradient-to-r from-violet-800 to-violet-950 rounded-lg p-2"
+              style={{
+                boxShadow: "0 0 5px rgba(108, 103, 249, 0.88)",
+              }}
+            >
+              Resume
+            </a>
           </div>
         </nav>
       </header>
