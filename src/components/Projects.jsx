@@ -172,15 +172,15 @@ const Modal = ({ project, onClose, isOpen }) => {
           <p className="text-gray-400 text-sm sm:text-sm md:text-md lg:text-lg font-semibold">
             {project.tagline}
           </p>
-          <p className="text-gray-400 text-md md:text-xs lg:text-lg font-sans font-thin mt-4">
+          <p className="text-white text-md md:text-xs lg:text-lg font-sans font-thin mt-4">
             {renderTextWithLineBreaks(project.text)}
           </p>
-          <div className="flex flex-col items-center sm:flex-row sm:justify-center mb-4 w-5/6">
+          <div className="flex flex-col items-center sm:flex-row sm:justify-center mb-4 w-full md:w-11/12">
             <a
               href={project.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white bg-gradient-to-r from-violet-900 to-violet-950 rounded-lg p-2 flex flex-wrap items-center justify-center mb-1 sm:mb-0 sm:mr-2 sm:w-5/6"
+              className="text-white bg-gradient-to-r from-violet-900 to-violet-950 rounded-lg p-2 flex flex-wrap items-center justify-center sm:mb-0 sm:mr-2 sm:w-5/6"
             >
               Github <FaGithub className="ml-2" />
             </a>
@@ -189,14 +189,14 @@ const Modal = ({ project, onClose, isOpen }) => {
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white bg-gradient-to-r from-violet-950 to-violet-900 rounded-lg p-2 flex flex-wrap items-center justify-center sm:w-5/6 mb-1"
+                className="text-white bg-gradient-to-r from-violet-950 to-violet-900 rounded-lg p-2 flex flex-wrap items-center justify-center sm:w-5/6 "
               >
                 Visit Link <FaExternalLinkAlt className="ml-2" />
               </a>
             )}
           </div>
         </div>
-        <div className="mt-2 sm:mt-0 sm:w-1/2">
+        <div className="mt-1 sm:mt-0 sm:w-1/2">
           {project.modalSrc ? (
             <img
               src={project.modalSrc}
