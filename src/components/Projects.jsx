@@ -175,7 +175,7 @@ const Modal = ({ project, onClose, isOpen }) => {
           <p className="text-gray-400 text-md md:text-xs lg:text-lg font-sans font-thin mt-4">
             {renderTextWithLineBreaks(project.text)}
           </p>
-          <div className="flex flex-col items-center sm:flex-row sm:justify-center mb-4">
+          <div className="flex flex-col items-center sm:flex-row sm:justify-center mb-4 w-5/6">
             <a
               href={project.url}
               target="_blank"
