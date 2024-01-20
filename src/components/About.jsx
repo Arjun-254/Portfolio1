@@ -10,6 +10,7 @@ import "aos/dist/aos.css";
 import { Carousel } from "./Carousel";
 import Projects from "./Projects";
 import Research from "./Research";
+import { Timeline } from "../Timeline";
 
 const Card = ({ title, imageSrc }) => {
   return (
@@ -79,6 +80,22 @@ const About = () => {
       <div className="my-4" data-aos="fade-down" data-aos-mirror="true">
         <Carousel />
       </div>
+
+      {/*<div
+        className="flex justify-center items-center flex-column"
+        data-aos="fade-down"
+        data-aos-mirror="true"
+      >
+        <h1 className={`${styles.sectionHeadText} `}>Experience</h1>
+      </div>
+
+      <div
+        className="my-4 mx-auto flex-grow overflow-y-auto overflow-x-hidden no-scrollbar rounded-xl w-5/6 sm:w-5/6 md:w-5/6"
+        data-aos="fade-down"
+        data-aos-mirror="true"
+      >
+        <Timeline />
+  </div>*/}
 
       <div
         className="flex justify-center items-center flex-column"

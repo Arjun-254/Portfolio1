@@ -189,7 +189,7 @@ const Modal = ({ project, onClose, isOpen }) => {
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white bg-gradient-to-r from-violet-950 to-violet-900 rounded-lg p-2 flex flex-wrap items-center justify-center sm:w-5/6 "
+                className="text-white bg-gradient-to-r from-violet-950 to-violet-900 rounded-lg p-2 m-1 flex flex-wrap items-center justify-center sm:w-5/6 "
               >
                 Visit Link <FaExternalLinkAlt className="ml-2" />
               </a>

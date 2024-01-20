@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import About from "../components/About";
+import { Footer } from "../components/Footer";
 
 export const Landing = () => {
   return (
@@ -10,6 +11,7 @@ export const Landing = () => {
         <Navbar />
         <Hero />
         <About />
+        <Footer />
       </div>
     </div>
   );
