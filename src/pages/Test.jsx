@@ -81,7 +81,7 @@ export const Test = () => {
             </div>
           )}
           <Laptop
-            className={`z-40`}
+            className={``}
             onOpenChange={(isOpen) => setLaptopOpen(isOpen)}
             onNextChange={(isNext) => setNext(isNext)}
           />

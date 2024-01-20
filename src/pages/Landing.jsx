@@ -5,7 +5,7 @@ import About from "../components/About";
 
 export const Landing = () => {
   return (
-    <div className="relative z-0 bg-gradient-to-r from-black via-gray-900 to-black">
+    <div className="relative bg-gradient-to-r from-black via-gray-900 to-black no-scrollbar">
       <div className="bg-cover bg-no-repeat bg-center">
         <Navbar />
         <Hero />

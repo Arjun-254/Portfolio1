@@ -1,12 +1,12 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import image from "./logo.png";
+import image from "../assets/logo.png";
 
 export default function Navbar() {
   const navigate = useNavigate();
   return (
     <div className="flex flex-row  ">
-      <header className="absolute inset-x-0 top-0 z-50 bg-gradient-to-r from-gray-800 to-black">
+      <header className="absolute inset-x-0 top-0  bg-gradient-to-r from-gray-800 to-black">
         <nav
           className="flex flex-row items-center justify-between p-2  lg:px-8 "
           aria-label="Global"
@@ -49,10 +49,6 @@ export default function Navbar() {
             </p>
           </div>
         </nav>
-
-        <div className="lg:hidden" role="dialog" aria-modal="true">
-          <div className="fixed inset-0 z-50"></div>
-        </div>
       </header>
     </div>
   );

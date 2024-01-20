@@ -39,7 +39,7 @@ const Hero = () => {
             Hi, I'm <span className="text-violet-600">Arjun Shah</span>
           </h1>
           <p
-            className={`${styles.heroSubText} text-gray-400 font-sans text-md mt-2`}
+            className={`${styles.heroSubText} text-gray-400 font-sans text-xs sm:text-xs md:text-md `}
           >
             <Typewriter
               words={[

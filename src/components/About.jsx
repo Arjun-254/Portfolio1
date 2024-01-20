@@ -8,6 +8,7 @@ import img2 from "../assets/creator.png";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { Carousel } from "./Carousel";
+import Projects from "./Projects";
 
 const Card = ({ title, imageSrc }) => {
   return (
@@ -52,25 +53,20 @@ const About = () => {
       >
         <h1 className={`${styles.sectionHeadText}`}>Overview</h1>
       </div>
-
       <p
-        className="mx-10 mt-4 text-secondary text-[17px] w-3xl flex justify-center items-cente text-center"
+        className="mx-auto my-4 text-secondary text-[17px] w-5/6 sm:w-5/6 md:w-4/6 text-center"
         data-aos="fade-down"
         data-aos-mirror="true"
       >
-        I am a highly motivated college student eager to start an internship or
-        research opportunity that will allow me to utilize my problem-solving
-        skills and attention to detail to further develop my abilities in the
-        field of computer science. I'm a quick learner and excited to learn new
-        frameworks and languages.
+        I am pursuing a major in Computer Science and have previously served as
+        a SDE intern at HDFC Securities. Additionally, I bring valuable research
+        experience to complement my academic background.
       </p>
-
       <div className="mt-5 mx-auto flex flex-wrap gap-10 justify-center items">
         <Card title="Comp-Sci Major" imageSrc={img} />
         <Card title="Web Developer" imageSrc={img1} />
         <Card title="AI/ML Developer" imageSrc={img2} />
       </div>
-
       <div
         className="flex justify-center items-center flex-column"
         data-aos="fade-down"
@@ -78,9 +74,22 @@ const About = () => {
       >
         <h1 className={`${styles.sectionHeadText} pt-10`}>Achievements</h1>
       </div>
-
-      <div data-aos="fade-down" data-aos-mirror="true">
+      <div className="my-4" data-aos="fade-down" data-aos-mirror="true">
         <Carousel />
+      </div>
+      <div
+        className="flex justify-center items-center flex-column"
+        data-aos="fade-down"
+        data-aos-mirror="true"
+      >
+        <h1 className={`${styles.sectionHeadText} `}>Projects</h1>
+      </div>
+      <div
+        className="my-4 mx-auto flex-grow overflow-y-auto overflow-x-hidden no-scrollbar rounded-xl w-5/6 sm:w-5/6 md:w-5/6"
+        data-aos="fade-down"
+        data-aos-mirror="true"
+      >
+        <Projects />
       </div>
     </div>
   );

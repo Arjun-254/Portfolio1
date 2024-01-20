@@ -20,7 +20,7 @@ export const Carousel = () => {
     infinite: true,
     speed: 500,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 5000,
     slidesToShow: 1,
     slidesToScroll: 1,
     cssEase: "ease-in-out",
@@ -28,7 +28,7 @@ export const Carousel = () => {
   };
 
   return (
-    <div className="w-5/6 sm:w-5/6 md:w-4/6 mx-auto mt-10 rounded-md">
+    <div className="w-5/6 sm:w-5/6 md:w-4/6 mx-auto rounded-md">
       <Slider {...settings}>
         {images.map((image, index) => (
           <div
@@ -40,6 +40,7 @@ export const Carousel = () => {
                 src={image}
                 alt={`Image ${index + 1}`}
                 className="w-full h-full -z-0 absolute rounded-md transition-all transform group-hover:scale-105 "
+                style={{ aspectRatio: "16/9" }}
               />
               <div className="absolute inset-0 flex items-center justify-center text-white text-lg opacity-80 sm:opacity-0 group-hover:opacity-100 transition-all bg-black bg-opacity-90 rounded-md ">
                 <div className="text-center ">
