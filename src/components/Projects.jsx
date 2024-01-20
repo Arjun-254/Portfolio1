@@ -38,7 +38,7 @@ const projects = [
     name: "StockWatch",
     imageSrc: StockWatchLanding,
     modalSrc: StockWatchDashboard,
-    url: "https://github.com/Arjun-254/PS3-Licht_Den_Code",
+    url: "https://github.com/Arjun-254/PS3-Licht_Den_Code/tree/frontend",
     winner: "HackRx 4.0 Winner",
     tagline: "Developed a Stock Recommendation Engine",
     text: `• Created a stock remcommendation app with DeepFace face authentication for a secure signup and login process. \n
@@ -48,7 +48,7 @@ const projects = [
   {
     name: "RailwayBuddy",
     imageSrc: RailwayBuddyLanding,
-    url: "https://github.com/Arjun-254/SIH1348_LichtDenCode",
+    url: "https://github.com/Arjun-254/SIH1348_LichtDenCode/tree/ML",
     modalSrc: RailwayBuddyChat,
     winner: "SIH '23 Winner",
     tagline: "Multilingual Railway Assistant (SIH1348)",
@@ -61,7 +61,7 @@ const projects = [
     name: "Correctify",
     imageSrc: CorrectifyLanding,
     modalSrc: CorrectifyChat,
-    url: "https://github.com/Arjun-254/Correctify-HackX",
+    url: "https://github.com/Arjun-254/Correctify-HackX/tree/Frontend",
     winner: "HackX '23 Finalist",
     tagline: " Text Correction Engine",
     text: `• Built using ReactJS, FastAPI, Machine Learning and ThreeJS. \n
