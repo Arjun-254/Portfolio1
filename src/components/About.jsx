@@ -81,7 +81,7 @@ const About = () => {
         <Carousel />
       </div>
 
-      {/*<div
+      <div
         className="flex justify-center items-center flex-column"
         data-aos="fade-down"
         data-aos-mirror="true"
@@ -95,7 +95,7 @@ const About = () => {
         data-aos-mirror="true"
       >
         <Timeline />
-  </div>*/}
+      </div>
 
       <div
         className="flex justify-center items-center flex-column"
