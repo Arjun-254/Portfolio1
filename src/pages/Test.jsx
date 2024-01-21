@@ -8,6 +8,8 @@ import Hero from "../components/Hero";
 import About from "../components/About";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { Footer } from "../components/Footer";
+import { Landing } from "./Landing";
 
 export const Test = () => {
   const [laptopOpen, setLaptopOpen] = useState(false);
@@ -22,7 +24,7 @@ export const Test = () => {
   }, []);
 
   return (
-    <>
+    <div>
       {!next && (
         <div className="min-h-screen flex flex-row justify-center items-center relative ">
           {!laptopOpen && (
@@ -117,15 +119,7 @@ export const Test = () => {
           )}
         </div>
       )}
-      {next && (
-        <div className="relative z-0 bg-gradient-to-r from-black via-gray-900 to-black">
-          <div className="bg-cover bg-no-repeat bg-center">
-            <Navbar />
-            <Hero />
-            <About />
-          </div>
-        </div>
-      )}
-    </>
+      {next && <Landing />}
+    </div>
   );
 };

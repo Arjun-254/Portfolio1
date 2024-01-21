@@ -15,7 +15,7 @@ export const Footer = () => {
   }, []);
   return (
     <div
-      className="bg-gradient-to-t from-gray-900 to-gray-800 text-white"
+      className="bg-gradient-to-t from-gray-900 to-gray-800 text-white bottom-0"
       data-aos="slide-up"
       data-aos-mirror="true"
     >
