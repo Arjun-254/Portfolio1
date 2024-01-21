@@ -14,9 +14,9 @@ const timelineData = [
     company: "HDFC Securities",
     icon: HLogo,
     points: [
-      "Developed ReactJS and Firebase-based webpages for HDFC Sky, optimizing the customer onboarding process via referrals. These pages efficiently managed over 2 million requests.",
-      "Conducted real-time app review analytics using web scraping (Beautiful Soup), NLP, and BERT for Sentiment Analysis.",
-      "Reduction of turnaround time and increased operational efficiency with automation of tasks using Python",
+      "Developed ReactJS and Firebase-based webpages for HDFC Sky, optimizing the customer onboarding process via referrals. These pages have efficiently managed over 2 million requests to date.",
+      "Conducted real-time app review analytics using web scraping (Beautiful Soup), NLP, and BERT(Sentiment Analysis) to identify recurring themes in reviews, aiding in understanding user concerns and bugs.",
+      "Reduction of turnaround time and increased operational efficiency with automation of tasks using Python.",
     ],
   },
 ];
