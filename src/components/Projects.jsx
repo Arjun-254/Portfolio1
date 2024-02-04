@@ -38,6 +38,7 @@ const projects = [
     name: "StockWatch",
     imageSrc: StockWatchLanding,
     modalSrc: StockWatchDashboard,
+    link: "https://stock-watch-ten.vercel.app/",
     url: "https://github.com/Arjun-254/PS3-Licht_Den_Code/tree/frontend",
     winner: "HackRx 4.0 Winner",
     tagline: "Developed a Stock Recommendation Engine",
