@@ -7,7 +7,7 @@ export default function Navbar() {
   const navigate = useNavigate();
   return (
     <div className="flex flex-row">
-      <header className="absolute inset-x-0 top-0  bg-gradient-to-r from-gray-800 to-black">
+      <header className="absolute inset-x-0 top-0  bg-gradient-to-r from-gray-900 to-black">
         <nav
           className="flex flex-row items-center justify-between p-2  lg:px-8 "
           aria-label="Global"
