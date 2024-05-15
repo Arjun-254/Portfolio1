@@ -10,7 +10,7 @@ import "aos/dist/aos.css";
 import { Carousel } from "./Carousel";
 import Projects from "./Projects";
 import Research from "./Research";
-import { Timeline } from "../Timeline";
+import { Timeline } from "./Timeline";
 
 const Card = ({ title, imageSrc }) => {
   return (

@@ -15,8 +15,8 @@ export const Footer = () => {
   }, []);
   return (
     <div
-      className="bg-gradient-to-t from-gray-900 to-gray-800 text-white bottom-0"
-      data-aos="slide-up"
+      className="bg-gradient-to-t from-gray-900 to-gray-800 text-white bottom-0 z-10"
+      data-aos="flip-up"
       data-aos-mirror="true"
     >
       <div className="container mx-auto py-3">

@@ -4,10 +4,28 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import { RiStarSLine } from "react-icons/ri";
-import HLogo from "../src/assets/HSEC_Logo.png";
+import HLogo from "../assets/HSEC_Logo.png";
+import bfhlLogo from "../assets/bfhl.png"
+import uiucLogo from "../assets/UIUC.png"
 
 const timelineData = [
+  {
+    date:"Upcoming Summer 2024",
+    title: 'UIUC+ Summer Research Program in Software Engineering',
+    company: "University of Illinois Urbana-Champaign",
+    icon: uiucLogo,
+    points: [
+    ],
+  },
+  {
+    date: "Upcoming Summer 2024",
+    title: "Data Engineering Intern",
+    company: "Bajaj Finserv Health",
+    icon: bfhlLogo,
+    points: [
+      "Incoming Summer '24 Data Engineering Intern",
+    ],
+  },
   {
     date: "June 2023 - August 2023",
     title: "SDE Intern",
@@ -24,7 +42,7 @@ const timelineData = [
 export const Timeline = () => {
   return (
     <div>
-      <VerticalTimeline layout="1-column-left">
+      <VerticalTimeline layout="2-columns" animate={true}>
         {timelineData.map((experience, index) => (
           <VerticalTimelineElement
             key={`experience-${index}`}
