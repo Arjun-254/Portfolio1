@@ -5,7 +5,6 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import HLogo from "../assets/HSEC_Logo.png";
-import bfhlLogo from "../assets/bfhl.png"
 import uiucLogo from "../assets/UIUC.png"
 
 const timelineData = [
@@ -15,15 +14,6 @@ const timelineData = [
     company: "University of Illinois Urbana-Champaign",
     icon: uiucLogo,
     points: [
-    ],
-  },
-  {
-    date: "Upcoming Summer 2024",
-    title: "Data Engineering Intern",
-    company: "Bajaj Finserv Health",
-    icon: bfhlLogo,
-    points: [
-      "Incoming Summer '24 Data Engineering Intern",
     ],
   },
   {
