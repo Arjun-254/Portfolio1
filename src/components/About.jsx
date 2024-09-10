@@ -127,7 +127,7 @@ const About = () => {
         data-aos-mirror="true"
       >
        I am a <strong className="text-white">full-stack and machine learning developer</strong> currently pursuing a major in Computer Science. 
-       I am excited to begin my role as an upcoming <strong className="text-white">Data Engineering Intern at Bajaj Finserv Health</strong> and <strong className="text-white">UIUC+ Summer Researcher.</strong> 
+       I am excited to begin my role as a <strong className="text-white">UIUC+ Summer Research Intern.</strong> 
        {' '}Previously, I gained valuable experience as a Software Development Engineer (SDE) intern at HDFC Securities. 
        My diverse background includes both academic and research experiences, complementing my skills in software development and machine learning.
       </p>
