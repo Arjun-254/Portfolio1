@@ -9,12 +9,13 @@ import uiucLogo from "../assets/UIUC.png"
 
 const timelineData = [
   {
-    date:"Upcoming Summer 2024",
-    title: 'UIUC+ Summer Research Program in Software Engineering',
+    date:"May 2024 - Present",
+    title: 'Research Intern',
     company: "University of Illinois Urbana-Champaign",
-    icon: uiucLogo,
     points: [
+      "UIUC+ Research Program in Software Engineering.",
     ],
+    icon: uiucLogo,
   },
   {
     date: "June 2023 - August 2023",

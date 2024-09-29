@@ -1,17 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { IoMdPaper } from "react-icons/io";
 
-import RP1 from "../assets/RP1.jpg";
+import RP1 from "../assets/RP1.png";
 
 import Aos from "aos";
 import "aos/dist/aos.css";
 
-const reserachPapers = [
+const researchPapers = [
   {
     name: "Predicting Solar Energy Generation with Machine Learning based on AQI and Weather Features",
     imageSrc: RP1,
-    url: "https://www.researchsquare.com/article/rs-3178713/v1",
-    status: "Preprint",
+    url: "https://arxiv.org/abs/2408.12476v2",
+    status: "Accepted at AISD2024 : Second International Workshop on Artificial Intelligence: Empowering Sustainable Development",
   },
 ];
 
@@ -31,23 +31,23 @@ const Research = () => {
         className="flex flex-col items-center justify-center space-y-4 pb-2"
         style={{ overflow: "hidden" }}
       >
-        {reserachPapers.map((project) => (
+        {researchPapers.map((project) => (
           <div
             key={project.name}
-            className="bg-gray-800 p-3 rounded-lg  md:w-1/2 md:h-1/2"
+            className="bg-gray-800 p-3 rounded-lg w-full md:w-2/3 lg:w-1/2"
             data-aos="fade-down"
             data-aos-mirror="true"
           >
-            <h2 className="text-white font-sans mb-2 text-left text-sm  sm:text-xs md:text-md lg:text-lg">
+            <h2 className="text-white font-sans mb-2 text-left text-sm sm:text-xs md:text-md lg:text-lg">
               <i>{project.name}</i>
             </h2>
-            <img
-              src={project.imageSrc}
-              alt={project.name}
-              className="w-full h-full rounded-lg"
-              style={{ aspectRatio: "16/9" }}
-            />
-
+            <div className="flex justify-center items-center bg-gray-700 rounded-lg overflow-hidden">
+              <img
+                src={project.imageSrc}
+                alt={project.name}
+                className="max-w-full max-h-[40vh] object-contain"
+              />
+            </div>
             <div className="flex flex-row justify-center mt-2">
               <a
                 href={project.url}

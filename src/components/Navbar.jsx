@@ -27,7 +27,7 @@ export default function Navbar() {
               className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
             >
               <a
-                href="https://drive.google.com/file/d/1AwSZUSmziBhfy4b_OC9j6az12qHm3_mE/view?usp=sharing"
+                href="https://drive.google.com/file/d/1XLW27pD2artMQJmDiv4me4tX9XFJUqJ7/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-xs font-sans leading-6 text-white bg-gradient-to-r from-violet-800 to-violet-950 rounded-lg p-2"
@@ -54,7 +54,7 @@ export default function Navbar() {
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end z-10">
             <a
-              href="https://drive.google.com/file/d/1AwSZUSmziBhfy4b_OC9j6az12qHm3_mE/view?usp=sharing"
+              href="https://drive.google.com/file/d/1XLW27pD2artMQJmDiv4me4tX9XFJUqJ7/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm font-sans leading-6 text-white bg-gradient-to-r from-violet-800 to-violet-950 rounded-lg p-2"
