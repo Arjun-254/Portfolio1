@@ -1,16 +1,12 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
-import ComputersCanvas from "./canvas/Computers";
+import ModelCanvas from "./canvas/Model";
 import { Typewriter } from "react-simple-typewriter";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
-const Hero = () => {
-  const HeroVariants = {
-    initial: { opacity: 0, x: -15, y: 15 },
-    animate: { opacity: 1, x: 0, y: 0, transition: { duration: 1.0 } },
-  };
+const Statement = () => {
   useEffect(() => {
     Aos.init({
       duration: 2500,
@@ -36,7 +32,7 @@ const Hero = () => {
               textShadow: "0 0 5px rgba(108, 103, 249, 0.88)",
             }}
           >
-            Hi, I'm <span className="text-violet-600">Arjun Shah</span>
+            Arjun's Portfolio
           </h1>
           <p
             className={`${styles.heroSubText} text-gray-400 font-sans text-xs sm:text-xs md:text-md `}
@@ -54,7 +50,7 @@ const Hero = () => {
           </p>
         </div>
       </div>
-      <ComputersCanvas />
+      <ModelCanvas />
 
       <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
         <a>
@@ -79,4 +75,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default Statement;

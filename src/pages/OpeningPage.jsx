@@ -1,17 +1,12 @@
 import React, { useState, useEffect } from "react";
 import Laptop from "../components/canvas/Laptop";
 import { Typewriter } from "react-simple-typewriter";
-import { styles } from "../styles";
 import { motion } from "framer-motion";
-import Navbar from "../components/Navbar";
-import Hero from "../components/Hero";
-import About from "../components/About";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import { Footer } from "../components/Footer";
 import { Landing } from "./Landing";
 
-export const Test = () => {
+export const OpeningPage = () => {
   const [laptopOpen, setLaptopOpen] = useState(false);
   const [next, setNext] = useState(false);
   useEffect(() => {

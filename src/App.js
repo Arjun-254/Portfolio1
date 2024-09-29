@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Landing } from "./pages/Landing";
-import { Test } from "./pages/Test";
+import { OpeningPage } from "./pages/OpeningPage";
 import AnimatedCursor from "react-animated-cursor";
 
 export default function App() {
@@ -9,7 +9,7 @@ export default function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/Next" element={<Landing />} />
-          <Route path="/" element={<Test />} />
+          <Route path="/" element={<OpeningPage />} />
         </Routes>
       </BrowserRouter>
     </div>

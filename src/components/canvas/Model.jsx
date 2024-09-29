@@ -5,15 +5,13 @@ import {
   Preload,
   useGLTF,
   SpotLight,
-  useDepthBuffer,
   Float,
-  Decal,
 } from "@react-three/drei";
-import { AmbientLight, Vector3 } from "three";
+import { Vector3 } from "three";
 import CanvasLoader from "../Loader";
 
-const Computers = ({ isMobile }) => {
-  const depthBuffer = useDepthBuffer({ frames: 1 });
+const Model = ({ isMobile }) => {
+
   const computer = useGLTF("./william_shakespeare_statue/scene.gltf");
 
   function MovingSpot({ vec = new Vector3(), ...props }) {
@@ -82,7 +80,7 @@ const Computers = ({ isMobile }) => {
   );
 };
 
-const ComputersCanvas = () => {
+const ModelCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -136,7 +134,7 @@ const ComputersCanvas = () => {
           />
         )}
         <Float>
-          <Computers isMobile={isMobile} />
+          <Model isMobile={isMobile} />
         </Float>
       </Suspense>
 
@@ -145,4 +143,4 @@ const ComputersCanvas = () => {
   );
 };
 
-export default ComputersCanvas;
+export default ModelCanvas;
