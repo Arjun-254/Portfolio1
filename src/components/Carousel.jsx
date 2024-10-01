@@ -23,11 +23,11 @@ export const Carousel = () => {
     infinite: true,
     speed: 500,
     autoplay: true,
-    autoplaySpeed: 10000,
+    autoplaySpeed: 5000,
     slidesToShow: 1,
     slidesToScroll: 1,
     cssEase: "ease-in-out",
-    arrows: false,
+    arrows: true,
   };
 
   return (

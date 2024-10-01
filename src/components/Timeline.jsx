@@ -6,6 +6,7 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import HLogo from "../assets/HSEC_Logo.png";
 import uiucLogo from "../assets/UIUC.png"
+import DjsceLogo from "../assets/DJSCE_Logo.png"
 
 const timelineData = [
   {
@@ -16,6 +17,16 @@ const timelineData = [
       "UIUC+ Research Program in Software Engineering.",
     ],
     icon: uiucLogo,
+  },
+  {
+    date: "August 2023 – January 2024",
+    title: "Teaching Assistant",
+    company: "Dwarkadas J Sanghvi College of Engineering",
+    icon: DjsceLogo,
+    points: [
+      "Assisted Prof. Aniket Kore in teaching Python lab sessions for Second Year Computer Engineering students, covering libraries like NumPy, Pandas, Matplotlib and Tkinter.",
+      "Held hands-on laboratory sessions, guiding students in learning and applying concepts while providing clarification and debugging help to support their exam preparation.",
+    ],
   },
   {
     date: "June 2023 - August 2023",
