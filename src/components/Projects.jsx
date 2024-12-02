@@ -23,6 +23,11 @@ import AuthenticaLanding from "../assets/AuthenticaLanding.jpeg";
 import CorrectifyLanding from "../assets/CorrectifyLanding.jpg";
 import CorrectifyChat from "../assets/CorrectifyChat.jpg";
 
+import CurateSage from "../assets/CurateSage.png";
+import CurateSageModal from "../assets/CurateSageModal.png";
+
+import MedicalBot from "../assets/MedicalBot.png";
+
 import PortolioLanding from "../assets/PortolioLanding.jpg";
 import ReviewAnalytics from "../assets/ReviewAnalytics.jpg";
 import AskYourCSV from "../assets/AskYourCSV.jpg";
@@ -42,9 +47,11 @@ const projects = [
     url: "https://github.com/Arjun-254/PS3-Licht_Den_Code/tree/frontend",
     winner: "HackRx 4.0 Winner",
     tagline: "Developed a Stock Recommendation Engine",
-    text: `• Created a stock remcommendation app with DeepFace face authentication for a secure signup and login process. \n
-    • Features include visually captivating and responsive stock graphs for each stock ticker, ML models like FinBert for Article Sentiment Analysis of scraped articles, SARIMA for price prediction and Recommender Systems.\n
-    • 3D Rupee Model integrated using React Three Fibre (ThreeJS).`,
+    text: `• Created a stock recommendation and stock-price tracking full-stack web application with Google reCAPTCHA-v2 and
+            DeepFace face authentication for a secure login process.
+            • Utilizes an ensemble of machine learning techniques, including a BERT model for sentiment analysis of financial news,
+            a CNN-LSTM for price forecasting, and hybrid recommender systems for stock selection.
+            • Features include interactive stock price graphs, personalized watchlists, and real-time financial news updates.`,
   },
   {
     name: "RailwayBuddy",
@@ -53,10 +60,25 @@ const projects = [
     modalSrc: RailwayBuddyChat,
     winner: "SIH '23 Winner",
     tagline: "Multilingual Railway Assistant (SIH1348)",
-    text: `• WhisperX (STT), ElevenLabs-TTS and MBART translator enable swift speech-to-speech translation. \n
-    • Gemini-based chatbot handles queries and integrates with maps, employing location detection using IndicNER.\n
-    • Implemented IVRS for station authorities, facilitating communication through calls and SMS via Twilio.\n
-    • Chat Component crafted from the ground up, integrating voice and text input capabilities across multiple languages.`,
+    text: `• Developed a Natural Language Translation Engine for announcements and distribution of information at stations.
+          • Whisper-V2-Large (STT), mBART-50 translator and Coqui-TTS enable swift speech-to-speech translation.
+          • A Gemini-based chat-bot handles user queries and IndicNER is used to identify locations in transcribed text and
+          integrated with Google Maps to display train routes and timings between detected locations.
+          • Implemented IVRS for station authorities, facilitating communication with passengers in their preferred language
+          through calls and SMS via Twilio.`,
+  },
+  {
+    name: "CurateSage",
+    imageSrc: CurateSage,
+    url: "https://github.com/Arjun-254/CurateSage---Techgium",
+    modalSrc: CurateSageModal,
+    winner: "Techgium Semi-Finalist",
+    tagline: "Personalized Course Recommendation System",
+    text: `• Built a course recommendation website using heterogeneous Graph Neural Networks with PyTorch Geometric to provide
+            context-aware recommendations, modeling relationships between students, courses, and grades.
+            • Utilized the open-university-learning-analytics and course-reviews datasets for Graph Neural Network training.
+            • Designed a lightweight GNN model with SAGEConv layers, achieving a CPU inference time of 0.03 seconds.
+            • Enhanced model explainability using GNNExplainer and CaptumExplainer.`,
   },
   {
     name: "Correctify",
@@ -72,27 +94,17 @@ const projects = [
     `,
   },
   {
-    name: "News Integrity Analyzer",
-    imageSrc: NewsIntegrity,
-    url: "https://github.com/Arjun-254/IPD_FakeNews",
-    link: "https://fakenews.streamlit.app",
-    tagline: " Fake News Detection",
-    text: `• Surpassed classical ML constraints by utilizing BERT for news classification, however this model was dependent on training data and inherited biases.\n
-    • Decided to then use the FactCC model that checks for factual correctness.\n
-    • FactCC's strength lies in its dynamic adaptability, achieved through real-time scraping and verification of information.\n
-    `,
-  },
-  {
-    name: "Real-Time Analytics",
-    imageSrc: ReviewAnalytics,
-    url: "https://github.com/Arjun-254/Review-Analytics",
-    winner: "",
-    link: "https://android-analytics.streamlit.app/",
-    tagline: " Review Analytics using NLP",
-    text: `
-    • Implemented real-time web scraping to extract app reviews, employing pandas for in-depth analytics.\n\
-    • Employed NLTK and a fine-tuned BERT model for sentiment analysis, providing nuanced insights into user sentiments in reviews.\n
-    • Created an interactive Streamlit dashboard for dynamic filtering and visualization of review trends using Altair and Plotly. \n`,
+    name: "Medical Question-Answering System",
+    imageSrc: MedicalBot,
+    url: "https://github.com/Arjun-254/SupportivMLE-InternFinetune",
+    modalSrc: MedicalBot,
+    tagline: "Fine tuned LLM's using LoRA on device.",
+    text: `• The goal was to develop a medical chatbot using an open-source model. Initially fine-tuned GPT-2 but switched to
+            Gemma-2B due to GPT-2’s excessive hallucinations likely caused by the lack of a dedicated context column in the data.
+            • Fine-tuned a quantized Gemma-2B model on a dataset of medical Q&A pairs using MLX-LoRA, enabling efficient
+            training with reduced memory requirements, which enhanced performance in handling medical queries.
+            • Deployed final model with documentation on Hugging Face and integrated it with Whisper-V2 to transcribe patient
+            queries, allowing for more natural interactions.`,
   },
   {
     name: "Authentica",

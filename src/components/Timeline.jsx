@@ -7,14 +7,27 @@ import "react-vertical-timeline-component/style.min.css";
 import HLogo from "../assets/HSEC_Logo.png";
 import uiucLogo from "../assets/UIUC.png"
 import DjsceLogo from "../assets/DJSCE_Logo.png"
+import CrisLogo from "../assets/CrisLogo.png"
 
 const timelineData = [
   {
-    date:"May 2024 - Present",
-    title: 'Research Intern',
+    date:"December 2024 Onwards",
+    title: 'Incoming Machine Learning Intern',
+    company: "CRIS - Ministry of Railways, Government of India",
+    points: [
+      "Incoming 6-month Intern at the Centre for Railway Information Systems (CRIS) to work on Speech-to-Speech translation and multi-modal AI software systems to recognise and mitigate issues raised by customers who travel using India’s Railway Network."
+    ],
+    icon: CrisLogo,
+  },
+  {
+    date:"May 2024 - Ongoing",
+    title: 'UIUC+ Research Intern',
     company: "University of Illinois Urbana-Champaign",
     points: [
-      "UIUC+ Research Program in Software Engineering.",
+      "Undergraduate Research: Working under Prof. Darko Marinov at UIUC in the domain of Mutation Testing with a focus on the application of ML and Generative AI for Equivalent Mutant Detection",
+      "Led the development of a web-based task allocation system to create a manually labelled mutant dataset, including writing documentation for the mutant labeling task and serving as site admin to ensure smooth operation.", 
+      "Wrote and optimized a shell script to perform TCE+ as a baseline for equivalent mutant detection, incorporating Maven test execution, containerization via Docker, and comprehensive cross-system testing to ensure reproducibility.",
+      "Currently investigating the application of LLMs for Equivalent Mutant Detection."
     ],
     icon: uiucLogo,
   },
@@ -34,10 +47,11 @@ const timelineData = [
     company: "HDFC Securities",
     icon: HLogo,
     points: [
-      "Developed ReactJS and Firebase-based webpages for HDFC Sky, optimizing the customer onboarding process via referrals. These pages have efficiently managed over 2 million requests to date.",
-      "Conducted real-time app review analytics using web scraping (Beautiful Soup), NLP, and BERT(Sentiment Analysis) to identify recurring themes in reviews, aiding in understanding user concerns and bugs.",
-      "Reduction of turnaround time and increased operational efficiency with automation of tasks using Python.",
-    ],
+      "Conducted real-time app review analytics using web scraping, N-gram & LDA-based topic modeling, and fine-tuned BERT for sentiment analysis to identify core issues and bugs, aiding user understanding.",
+      "Wrote Python scripts to automate excel and bond market data processing tasks, resulting in areduction of turnaround time by 97%. This led to substantial time and cost savings, improving overall efficiency.",
+      "Created Web pages utilizing ReactJS and Firebase for HDFC Sky, tracking and streamlining the customer on-boarding journey through referrals. These web pages have handled over 2.3 million requests to date.",
+      "CSVQueryBot: Employed LangChain and OpenAI APIs to facilitate the transformation of natural language user queries into pandas code to perform data analytics on user uploaded CSV files."
+    ], 
   },
 ];
 

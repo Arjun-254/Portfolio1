@@ -126,10 +126,8 @@ const About = () => {
         data-aos="fade-down"
         data-aos-mirror="true"
       >
-       I am a <strong className="text-white">full-stack and machine learning developer</strong> currently pursuing a major in Computer Science. 
-       I am excited to begin my role as a <strong className="text-white">UIUC+ Summer Research Intern.</strong> 
-       {' '}Previously, I gained valuable experience as a <strong className="text-white">Software Development Engineer (SDE) intern at HDFC Securities.</strong>
-       My diverse background includes both academic and research experiences, complementing my skills in software development and machine learning.
+       I am a full-stack and machine learning developer currently pursuing a major in Computer Science. 
+       My diverse background includes both academic, professional research experiences, complementing my skills in Natural Language Processing, Machine Learning and Software Engineering.
       </p>
 
       <div
