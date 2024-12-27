@@ -38,7 +38,7 @@ export const Footer = () => {
             <FaLinkedin className="w-8 h-8" />
           </a>
           {/* <a
-            href="https://drive.google.com/file/d/1xKXwtn3Rdd5WQHv1KjfCWnRS8tF70gLH/view?usp=sharing?usp=sharing"
+            href="https://drive.google.com/file/d/1fEj9QtEmjoKKqvLU4DAanK-VpKIwOBH7/view?usp=sharing?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="mr-6 text-gray-300 hover:text-gray-100 transition duration-300"
