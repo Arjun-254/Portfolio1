@@ -13,14 +13,14 @@ const researchPapers = [
     name: "VERITAS-NLI : Validation and Extraction of Reliable Information Through Automated Scraping and Natural Language Inference",
     imageSrc: Veritas,
     url: "https://arxiv.org/abs/2410.09455",
-    status: "Under Review at a Journal",
-    statusColor: "text-yellow-500"
+    status: "Accepted at EAAI",
+    statusColor: "text-green-500"
   },
   {
     name: "Predicting Solar Energy Generation with Machine Learning based on AQI and Weather Features",
     imageSrc: RP1,
     url: "https://arxiv.org/abs/2408.12476",
-    status: "Accepted and Presented at AISD2024->2nd Best Paper Award",
+    status: "Accepted and Presented at AISD2024 -> 2nd Best Paper Award",
     statusColor: "text-green-500"
   },
 ];
@@ -71,7 +71,7 @@ const Research = () => {
               </div>
               <div className="flex items-center justify-center w-full">
                 <FaCircle className={`mr-2 ${project.statusColor}`} size={10} />
-                <span className="text-white text-xs text-center">
+                <span className="text-white text-xs lg:text-base text-center">
                   {project.status}
                 </span>
               </div>
