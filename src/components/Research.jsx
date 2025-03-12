@@ -12,8 +12,8 @@ const researchPapers = [
   {
     name: "VERITAS-NLI : Validation and Extraction of Reliable Information Through Automated Scraping and Natural Language Inference",
     imageSrc: Veritas,
-    url: "https://arxiv.org/abs/2410.09455",
-    status: "Accepted at EAAI",
+    url: "https://authors.elsevier.com/a/1kgih3OWJ9CRjQ",
+    status: "EAAI - Engineering Applications of Artificial Intelligence",
     statusColor: "text-green-500"
   },
   {
