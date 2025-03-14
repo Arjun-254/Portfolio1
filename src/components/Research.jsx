@@ -19,7 +19,7 @@ const researchPapers = [
   {
     name: "Predicting Solar Energy Generation with Machine Learning based on AQI and Weather Features",
     imageSrc: RP1,
-    url: "https://arxiv.org/abs/2408.12476",
+    url: "https://ceur-ws.org/Vol-3940/AISD-2024_Paper_1.pdf",
     status: "Accepted and Presented at AISD2024 -> 2nd Best Paper Award",
     statusColor: "text-green-500"
   },
