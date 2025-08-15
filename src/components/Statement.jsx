@@ -39,7 +39,7 @@ const Statement = () => {
           >
             <Typewriter
               words={[
-                "I'm a curious and passionate Computer Science major, dedicated to mastering the intricacies of Machine Learning and WebDev.",
+                "I'm a curious and passionate AI Master's student at Carnegie Mellon, exploring Machine Learning research and developing scalable AI systems for real-world impact.",
               ]}
               cursor
               cursorStyle=""

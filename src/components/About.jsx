@@ -20,7 +20,7 @@ import { TbHexagonLetterC } from "react-icons/tb";
 import { FaHtml5 } from "react-icons/fa";
 import { FaCss3Alt } from "react-icons/fa";
 import { SiMysql } from "react-icons/si";
-import {SiMongodb} from "react-icons/si";
+import { SiMongodb } from "react-icons/si";
 import { TbBrandThreejs } from "react-icons/tb";
 import { SiStreamlit } from "react-icons/si";
 import { FaGithubSquare } from "react-icons/fa";
@@ -36,43 +36,58 @@ import { AiFillBoxPlot } from "react-icons/ai";
 import { SiLatex } from "react-icons/si";
 import { IoLogoVercel } from "react-icons/io5";
 import { RiOpenaiFill } from "react-icons/ri";
+import { FaJava } from "react-icons/fa";
+import { FaDocker } from "react-icons/fa";
+import { SiSelenium } from "react-icons/si";
+import { SiSqlite } from "react-icons/si";
+import { VscAzure } from "react-icons/vsc";
+import { SiFirebase } from "react-icons/si";
+import { SiHuggingface } from "react-icons/si";
+import { TbTerminal2 } from "react-icons/tb";
+import { GrGraphQl } from "react-icons/gr";
+import { Education } from "./Education";
 
 const cardData = [
-  // High-demand Technologies
-  { title: "React", Icon: FaReact },
-  { title: "JavaScript", Icon: IoLogoJavascript },
+  // Core AI/ML Technologies
   { title: "Python", Icon: FaPython },
-  { title: "MySQL", Icon: SiMysql },
-  { title: "MongoDB", Icon: SiMongodb },
   { title: "Pytorch", Icon: SiPytorch },
   { title: "TensorFlow", Icon: SiTensorflow },
-  { title: "FastAPI", Icon: SiFastapi },
-  { title: "OpenAI", Icon: RiOpenaiFill },
   { title: "Sk-learn", Icon: SiScikitlearn },
   { title: "Numpy", Icon: SiNumpy },
   { title: "Pandas", Icon: SiPandas },
-  { title: "HTML5", Icon: FaHtml5 },
-  { title: "CSS3", Icon: FaCss3Alt },
-  
-
-  // Version Control
-  { title: "Github", Icon: FaGithubSquare },
-
-  // Other useful technologies
-  { title: "TailwindCSS", Icon: SiTailwindcss },
-  { title: "Bootstrap", Icon: FaBootstrap },
-  { title: "Threejs", Icon: TbBrandThreejs },
-  { title: "Streamlit", Icon: SiStreamlit },
+  { title: "FastAPI", Icon: SiFastapi },
+  { title: "Latex", Icon: SiLatex },
   { title: "Opencv", Icon: SiOpencv },
   { title: "MatplotLib", Icon: AiFillBoxPlot },
-
-  // Lower-demand languages/technologies
-  { title: "C", Icon: TbHexagonLetterC },
+  { title: "OpenAI", Icon: RiOpenaiFill },
+  { title: "HF", Icon: SiHuggingface },
+  { title: "Streamlit", Icon: SiStreamlit },
+  
+  { title: "Docker", Icon: FaDocker },
+  { title: "Selenium", Icon: SiSelenium },
+  { title: "Azure", Icon: VscAzure },
+  { title: "Firebase", Icon: SiFirebase },
   { title: "Vercel", Icon: IoLogoVercel },
-  { title: "Latex", Icon: SiLatex },
+
+  { title: "JavaScript", Icon: IoLogoJavascript },
+  { title: "Java", Icon: FaJava },
+  { title: "C", Icon: TbHexagonLetterC },
+  { title: "Shell", Icon: TbTerminal2 },
+  
+  { title: "MySQL", Icon: SiMysql },
+  { title: "MongoDB", Icon: SiMongodb },
+  { title: "SQLite", Icon: SiSqlite },
+  { title: "Memgraph", Icon: GrGraphQl },
+  
+  { title: "React", Icon: FaReact },
+  { title: "HTML5", Icon: FaHtml5 },
+  { title: "CSS3", Icon: FaCss3Alt },
+  { title: "TailwindCSS", Icon: SiTailwindcss },
+  { title: "Threejs", Icon: TbBrandThreejs },
+  
+  // Additional
+  { title: "Bootstrap", Icon: FaBootstrap },
 ];
-
-
 
 
 const Card = ({ title, Icon }) => {
@@ -126,8 +141,12 @@ const About = () => {
         data-aos="fade-down"
         data-aos-mirror="true"
       >
-       I am a full-stack and machine learning developer currently pursuing a major in Computer Science. 
-       My diverse background includes both academic, professional research experiences, complementing my skills in Natural Language Processing, Machine Learning and Software Engineering.
+        I'm a Master's student in Artificial Intelligence at Carnegie Mellon University with a passion for machine learning, NLP, 
+        and software engineering. I enjoy building scalable AI solutions that solve real-world problems, from hierarchical LSTM models 
+        for complaint classification to computer vision systems for product cataloging and multilingual translation tools. My work spans 
+        research publications, research at the University of Illinois Urbana-Champaign, and internships at organizations like the Indian Railway Ministry
+         and HDFC Securities, with recognition including All India Rank 4 in Amazon ML Challenge and wins in national hackathons. I'm passionate about 
+        developing production-ready AI systems that bridge the gap between cutting-edge research and real-world applications.
       </p>
 
       <div
@@ -152,15 +171,21 @@ const About = () => {
           </button>
         </div>
       )}
+
       <div
-        className="flex justify-center items-center flex-column"
+        className="flex justify-center items-center flex-column pt-10"
         data-aos="fade-down"
         data-aos-mirror="true"
       >
-        <h1 className={`${styles.sectionHeadText} pt-10`}>Achievements</h1>
+        <h1 className={`${styles.sectionHeadText} `}>Education</h1>
       </div>
-      <div className="my-4" data-aos="fade-down" data-aos-mirror="true">
-        <Carousel />
+
+      <div
+        className="my-4 mx-auto flex-grow overflow-y-auto overflow-x-hidden no-scrollbar rounded-xl w-5/6 sm:w-5/6 md:w-5/6"
+        data-aos="fade-down"
+        data-aos-mirror="true"
+      >
+        <Education/>
       </div>
 
       <div
@@ -193,6 +218,17 @@ const About = () => {
         data-aos-mirror="true"
       >
         <Research />
+      </div>
+
+      <div
+        className="flex justify-center items-center flex-column"
+        data-aos="fade-down"
+        data-aos-mirror="true"
+      >
+        <h1 className={`${styles.sectionHeadText}`}>Achievements</h1>
+      </div>
+      <div className="my-4" data-aos="fade-down" data-aos-mirror="true">
+        <Carousel />
       </div>
 
       <div
