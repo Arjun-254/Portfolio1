@@ -54,7 +54,7 @@ export default function Navbar() {
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end z-10">
             <a
-              href="https://drive.google.com/file/d/1RXEQnWXSlzgErMHNxyOTKgFfR2p6zUUy/view"
+              href="https://drive.google.com/file/d/1B1EI3OK62zamEI860CYb_KHMpf4PYtPJ/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm font-sans leading-6 text-white bg-gradient-to-r from-violet-800 to-violet-950 rounded-lg p-2"
