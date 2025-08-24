@@ -27,7 +27,7 @@ export default function Navbar() {
               className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
             >
               <a
-                href="https://drive.google.com/file/d/1fEj9QtEmjoKKqvLU4DAanK-VpKIwOBH7/view?usp=sharing?usp=sharing"
+                href="https://drive.google.com/file/d/1B1EI3OK62zamEI860CYb_KHMpf4PYtPJ/view"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-xs font-sans leading-6 text-white bg-gradient-to-r from-violet-800 to-violet-950 rounded-lg p-2"
