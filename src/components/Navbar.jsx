@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import image from "../assets/logo.png";
 import { FaGithub } from "react-icons/fa6";
+import { FaGoogleScholar } from "react-icons/fa6";
 
 export default function Navbar() {
   const navigate = useNavigate();
@@ -19,6 +20,13 @@ export default function Navbar() {
               rel="noopener noreferrer"
             >
               <FaGithub className="w-6 h-6" />
+            </a>
+            <a
+              href="https://scholar.google.com/citations?user=OzyU2LMAAAAJ&hl=en"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaGoogleScholar className="w-6 h-6 text-white mx-3" />
             </a>
           </div>
           <div className="flex lg:hidden z-10">
