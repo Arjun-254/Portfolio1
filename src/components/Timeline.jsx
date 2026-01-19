@@ -8,8 +8,18 @@ import HLogo from "../assets/HSEC_Logo.png";
 import uiucLogo from "../assets/UIUC.png"
 import DjsceLogo from "../assets/DJSCE_Logo.png"
 import CrisLogo from "../assets/CrisLogo.png"
+import SCSLogo from "../assets/SCSLogo.png"
 
 const internshipData = [
+  {
+    date:"October 2025 - Present",
+    title: 'Research Assistant',
+    company: "Carnegie Mellon University - Language Technologies Institute",
+    points: [
+      "Working on automated multilingual MT evaluation research with Prof. Alon Lavie, developing new metrics and scoring pipelines.",
+    ],
+    icon: SCSLogo,
+  },
   {
     date:"December 2024 - June 2025",
     title: 'Machine Learning Intern',
