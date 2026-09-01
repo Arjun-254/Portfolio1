@@ -12,7 +12,7 @@ const educationData = [
     date:"2025 - 2027",
     degree: 'Carnegie Mellon University – School of Computer Science',
     college: "Master of Science in Artificial Intelligence and Innovation (MSAII)",
-    points: ['GPA 4.00/4.00'],
+    points: ['GPA 4.07/4.00'],
     icon: CmuLogo,
   },
   {

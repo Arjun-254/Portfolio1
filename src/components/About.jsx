@@ -141,11 +141,12 @@ const About = () => {
         data-aos="fade-down"
         data-aos-mirror="true"
       >
-        I'm a Master's student in Artificial Intelligence at Carnegie Mellon University with a passion for machine learning, NLP, 
-        and software engineering. I enjoy building scalable AI solutions that solve real-world problems, from hierarchical LSTM models 
-        for complaint classification to computer vision systems for product cataloging and multilingual translation tools. My work spans 
-        research publications, research at the University of Illinois Urbana-Champaign, and internships at organizations like the Indian Railway Ministry
-         and HDFC Securities, with recognition including All India Rank 4 in Amazon ML Challenge and wins in national hackathons. I'm passionate about 
+        I'm a Master's student in Artificial Intelligence at Carnegie Mellon University with a passion for machine learning, NLP,
+        and software engineering. Most recently, I interned at Google working on BigQuery Machine Learning Engineering, building
+        evaluation frameworks and telemetry systems for GenAI SQL functions. I enjoy building scalable AI solutions that solve real-world problems, from hierarchical LSTM models
+        for complaint classification to computer vision systems for product cataloging and multilingual translation tools. My work spans
+        research publications, research at Carnegie Mellon's Language Technologies Institute and the University of Illinois Urbana-Champaign, and internships at organizations like the Indian Railway Ministry
+         and HDFC Securities, with recognition including All India Rank 4 in Amazon ML Challenge and wins in national hackathons. I'm passionate about
         developing production-ready AI systems that bridge the gap between cutting-edge research and real-world applications.
       </p>
 

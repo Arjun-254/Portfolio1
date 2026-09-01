@@ -9,8 +9,19 @@ import uiucLogo from "../assets/UIUC.png"
 import DjsceLogo from "../assets/DJSCE_Logo.png"
 import CrisLogo from "../assets/CrisLogo.png"
 import SCSLogo from "../assets/SCSLogo.png"
+import GoogleLogo from "../assets/GoogleLogo.png"
 
 const internshipData = [
+  { 
+    date: "May 2026 - August 2026", 
+    title: "Software Engineering Intern (BigQuery Machine Learning Engineering)", 
+    company: "Google", 
+    points: [ 
+      "Architected an evaluation framework to quantify covariate shift in BigQuery's GenAI SQL functions, implementing a high-performance C++ service with Vertex AI Structured Output to classify user queries into privacy-approved categories.", 
+      "Engineered an async 'fire-and-forget' telemetry layer in Java within BigQuery's Control Plane, streaming AI query metadata to the classification backend with near-zero impact on critical-path latency.", 
+      "Developed internal BI dashboards to compare online vs. offline distributions and mathematically reweight offline evaluation scores to reflect production reality, driving technical alignment and collaboration across 3 engineering teams.", 
+    ], 
+    icon: GoogleLogo, },
   {
     date:"October 2025 - Present",
     title: 'Research Assistant',
